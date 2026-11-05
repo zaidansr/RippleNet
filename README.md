@@ -1,4 +1,6 @@
-# RippleNet: synthetic forecasting feasibility pilot
+# RippleNet: work-in-progress AI-assisted research
+
+Work-in-progress quantitative research project using AI to investigate observation distortions, market shocks, and robust financial time-series forecasting.
 
 This repository tests a proposed distinction between observation corruption and genuine state shocks. It currently provides a simulator, causal filtering diagnostics, tests, and a critical research review. It does not contain a trained RippleNet model or evidence of superiority in financial markets.
 
