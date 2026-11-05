@@ -1,0 +1,110 @@
+{
+  "status": "diagnostic_only_not_performance_evidence",
+  "seed": 20261105,
+  "event_time": 40,
+  "n_steps": 120,
+  "burn_in": 128,
+  "score_window": 5,
+  "amplitude": [
+    0.5,
+    0.0,
+    0.0
+  ],
+  "process_cov": [
+    [
+      0.01,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.01,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.01
+    ]
+  ],
+  "observation_cov": [
+    [
+      0.0025,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0025,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0025
+    ]
+  ],
+  "python": "3.13.3",
+  "numpy": "2.3.2",
+  "source_tree_at_run": "1918b3be0bbdbe2644a8844c8e7a2146a5965b76",
+  "scenarios": {
+    "moderate_persistence": {
+      "transition": [
+        [
+          0.55,
+          0.1,
+          0.0
+        ],
+        [
+          0.0,
+          0.45,
+          0.1
+        ],
+        [
+          0.05,
+          0.0,
+          0.35
+        ]
+      ],
+      "max_observed_prefix_difference": 0.0,
+      "max_causal_forecast_prefix_difference": 0.0,
+      "max_state_propagation_identity_error": 3.29246152693539e-17,
+      "forecast_difference_norms_by_origin_delay": [
+        0.0,
+        0.12387808785138538,
+        0.08185988398513608,
+        0.046985460866334934,
+        0.026416549924393823
+      ]
+    },
+    "zero_persistence": {
+      "transition": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "max_observed_prefix_difference": 0.0,
+      "max_causal_forecast_prefix_difference": 0.0,
+      "max_state_propagation_identity_error": 0.0,
+      "forecast_difference_norms_by_origin_delay": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  }
+}

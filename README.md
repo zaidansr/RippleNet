@@ -22,5 +22,6 @@ The diagnostic checks mathematical identities and causal timing. Its output is n
 - [Results audit](docs/results-analysis.md): available evidence and analysis requirements.
 - [Mathematics](docs/math-tutorial.md): equations, assumptions, derivations, and numerical example.
 - [Paper analysis](docs/paper-analysis.md): a relevant primary-source paper selected for this review.
+- [Implementation notes](docs/implementation-notes.md): assumptions, interfaces, tests, and current limits.
 
 The work is AI-assisted. All scientific claims require reproducible evidence and checked sources. Explicit owner approval is required before any spending.
