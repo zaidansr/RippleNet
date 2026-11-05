@@ -6,6 +6,8 @@ This repository tests a proposed distinction between observation corruption and 
 
 ## Current results
 
+An exploratory conditional-risk reconstruction explains the v2 outcome: future innovations account for 95.763% of delayed Bayes risk, while exact retention improves conditional risk over projection by only 0.03564%. Even perfect current-state information would permit at most 4.27116% improvement over projection on these disclosed histories under the assumed model, below the 5% target. Original forecasts and stored scores were reproduced exactly. [Risk decomposition and independent reviews](docs/conditional-risk-results.md).
+
 The subagent-reviewed v2 diagnostic gives every method the true intervention time. Posterior type inference improves, but retaining the full mixture shows essentially no forecast gain over a Gaussian projected once and updated independently: -0.0013%, with an adjusted interval of [-0.1449%, +0.1642%], on 128 new paired seed blocks. It fails the 5% practical target. [V2 report and independent audits](docs/experiment-v2-results.md).
 
 The first causal mixture candidate failed the practical improvement gate on 30 held-out seeds. Against the development-selected baseline in the nominal moderate-persistence setting, its MSE was 1.4% worse for recording errors and 1.2% better for genuine shocks; the latter uncertainty interval includes zero improvement. It did not reliably beat the pooled-noise ablation and was 13.6% worse on recording errors under the price-derived corruption shift. [Full results and limitations](docs/experiment-v1-results.md).
@@ -19,6 +21,7 @@ python -m unittest discover -s tests -v
 python -m ripplenet.diagnostic
 python -m ripplenet.report
 python -m ripplenet.history_report
+python -m ripplenet.risk_report
 ```
 
 The diagnostic checks mathematical identities and causal timing. Its output is not a forecasting benchmark, a statistical significance test, or a mechanism ablation.
@@ -38,7 +41,10 @@ To reproduce the frozen benchmark into a separate directory, run `python -m ripp
 - [V2 shared-time specification](docs/experiment-v2.md): the exact two-component diagnostic and five contrasts.
 - [V2 mathematics](docs/experiment-v2-mathematics.md): exact updates, risk limitations, and the v1 covariance-interpretation correction.
 - [V2 results](docs/experiment-v2-results.md): 128-seed findings with independent statistical and engineering reviews.
+- [Exploratory conditional-risk analysis](docs/conditional-risk-results.md): noise floor, approximation excess, timing, and oracle headroom; this reuses disclosed histories and is not a fresh test.
 
 To reproduce v2 into a separate directory, run `python -m ripplenet.history_experiment --stage final --output work/v2-reproduction`. This repeats disclosed seeds and does not supply a new independent test.
+
+The exploratory moment reconstruction can be repeated with `python -m ripplenet.risk_reconstruction --output work/risk-reproduction`. It checks the actual frozen v2 source and original CSV metrics before reporting new conditional moments.
 
 The work is AI-assisted. All scientific claims require reproducible evidence and checked sources. Explicit owner approval is required before any spending.

@@ -83,6 +83,7 @@ def reconstruct(output: Path) -> dict[str, object]:
     output.mkdir(parents=True)
     seeds = list(range(60000, 60128))
     summary = {"status": "exploratory_reconstruction_of_disclosed_v2_histories", "seed_blocks": seeds,
+               "output_equality_semantics": "Exact numerical array equality including matching NaN positions, not a byte-level comparison",
                "frozen_commit": FROZEN_COMMIT, "bootstrap_seed": 678901, "bootstrap_replicates": 9999,
                "source_tree_at_run": subprocess.check_output(["git", "rev-parse", "HEAD^{tree}"], text=True).strip(),
                "python": platform.python_version(), "numpy": np.__version__, "settings": {}}
@@ -152,7 +153,7 @@ def reconstruct(output: Path) -> dict[str, object]:
                 if abs(record["bayes"]-.01)>1e-14 or max(record[name] for name in ("within_type", "type_information", "projected_excess", "frozen_excess"))>1e-14:
                     raise AssertionError("Zero-persistence negative control failed")
         item = {"disclosed_seed_blocks": 128, "per_origin_rows": len(records),
-                "all_forecast_paths_bitwise_equal_to_frozen": True, "all_type_paths_bitwise_equal_to_frozen": True,
+                "all_forecast_paths_exactly_equal_to_frozen": True, "all_type_paths_exactly_equal_to_frozen": True,
                 "frozen_csv_sha256_canonical_text": digest, "max_frozen_metric_error": max_metric_error,
                 "max_decomposition_identity_error": max_identity_error, "by_origin": by_delay,
                 "delayed_origins_1_to_4": descriptive({name: np.array(v) for name,v in blocks.items()})}

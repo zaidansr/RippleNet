@@ -1,0 +1,464 @@
+{
+  "status": "exploratory_reconstruction_of_disclosed_v2_histories",
+  "seed_blocks": [
+    60000,
+    60001,
+    60002,
+    60003,
+    60004,
+    60005,
+    60006,
+    60007,
+    60008,
+    60009,
+    60010,
+    60011,
+    60012,
+    60013,
+    60014,
+    60015,
+    60016,
+    60017,
+    60018,
+    60019,
+    60020,
+    60021,
+    60022,
+    60023,
+    60024,
+    60025,
+    60026,
+    60027,
+    60028,
+    60029,
+    60030,
+    60031,
+    60032,
+    60033,
+    60034,
+    60035,
+    60036,
+    60037,
+    60038,
+    60039,
+    60040,
+    60041,
+    60042,
+    60043,
+    60044,
+    60045,
+    60046,
+    60047,
+    60048,
+    60049,
+    60050,
+    60051,
+    60052,
+    60053,
+    60054,
+    60055,
+    60056,
+    60057,
+    60058,
+    60059,
+    60060,
+    60061,
+    60062,
+    60063,
+    60064,
+    60065,
+    60066,
+    60067,
+    60068,
+    60069,
+    60070,
+    60071,
+    60072,
+    60073,
+    60074,
+    60075,
+    60076,
+    60077,
+    60078,
+    60079,
+    60080,
+    60081,
+    60082,
+    60083,
+    60084,
+    60085,
+    60086,
+    60087,
+    60088,
+    60089,
+    60090,
+    60091,
+    60092,
+    60093,
+    60094,
+    60095,
+    60096,
+    60097,
+    60098,
+    60099,
+    60100,
+    60101,
+    60102,
+    60103,
+    60104,
+    60105,
+    60106,
+    60107,
+    60108,
+    60109,
+    60110,
+    60111,
+    60112,
+    60113,
+    60114,
+    60115,
+    60116,
+    60117,
+    60118,
+    60119,
+    60120,
+    60121,
+    60122,
+    60123,
+    60124,
+    60125,
+    60126,
+    60127
+  ],
+  "frozen_commit": "06a4ced5bd5efda3ec2dbc4f752117b412427bf6",
+  "bootstrap_seed": 678901,
+  "bootstrap_replicates": 9999,
+  "source_tree_at_run": "f31e680f359c468f99fe02a1e55efc0cbf6fac4d",
+  "python": "3.13.3",
+  "numpy": "2.3.2",
+  "settings": {
+    "moderate": {
+      "disclosed_seed_blocks": 128,
+      "per_origin_rows": 1280,
+      "frozen_csv_sha256_canonical_text": "adc9f1351590f738a769dad7df9b504741e07c46cf2eda2f1da3e6ca18f52bd1",
+      "max_frozen_metric_error": 0.0,
+      "max_decomposition_identity_error": 6.938893903907228e-18,
+      "by_origin": {
+        "0": {
+          "future": 0.01,
+          "within_type": 0.0013619979355537863,
+          "type_information": 0.01360376395310173,
+          "bayes": 0.02496576188865552,
+          "projected_excess": 0.0,
+          "frozen_excess": 0.0,
+          "projected_total": 0.02496576188865552,
+          "frozen_total": 0.02496576188865552,
+          "category_oracle": 0.011361997935553786
+        },
+        "1": {
+          "future": 0.01,
+          "within_type": 0.00044481932773491765,
+          "type_information": 1.1944297704674294e-05,
+          "bayes": 0.010456763625439593,
+          "projected_excess": 1.4742808604450164e-05,
+          "frozen_excess": 9.466626007992651e-05,
+          "projected_total": 0.010471506434044042,
+          "frozen_total": 0.01055142988551952,
+          "category_oracle": 0.010444819327734918
+        },
+        "2": {
+          "future": 0.01,
+          "within_type": 0.0004376865656867447,
+          "type_information": 1.182846830980163e-07,
+          "bayes": 0.010437804850369842,
+          "projected_excess": 1.4941007344786845e-07,
+          "frozen_excess": 9.56175841530242e-07,
+          "projected_total": 0.010437954260443291,
+          "frozen_total": 0.010438761026211371,
+          "category_oracle": 0.010437686565686746
+        },
+        "3": {
+          "future": 0.01,
+          "within_type": 0.00043761387921325775,
+          "type_information": 1.2674433259067611e-09,
+          "bayes": 0.010437615146656583,
+          "projected_excess": 1.6476818138081028e-09,
+          "frozen_excess": 1.032734612081646e-08,
+          "projected_total": 0.010437616794338397,
+          "frozen_total": 0.010437625474002704,
+          "category_oracle": 0.010437613879213258
+        },
+        "4": {
+          "future": 0.01,
+          "within_type": 0.0004376130900118287,
+          "type_information": 1.4226409418467483e-11,
+          "bayes": 0.010437613104238238,
+          "projected_excess": 1.8800114814360735e-11,
+          "frozen_excess": 1.1594270325081843e-10,
+          "projected_total": 0.010437613123038352,
+          "frozen_total": 0.010437613220180941,
+          "category_oracle": 0.01043761309001183
+        }
+      },
+      "delayed_origins_1_to_4": {
+        "future": {
+          "mean": 0.01,
+          "descriptive_ci95": [
+            0.01,
+            0.01
+          ]
+        },
+        "within_type": {
+          "mean": 0.0004394332156616872,
+          "descriptive_ci95": [
+            0.00043934148390607666,
+            0.00043952219383646524
+          ]
+        },
+        "type_information": {
+          "mean": 3.0159660143769087e-06,
+          "descriptive_ci95": [
+            2.410483929980074e-06,
+            3.6673483356189635e-06
+          ]
+        },
+        "bayes": {
+          "mean": 0.010442449181676064,
+          "descriptive_ci95": [
+            0.010441845689693793,
+            0.010443097253696144
+          ]
+        },
+        "projected_excess": {
+          "mean": 3.723471289956664e-06,
+          "descriptive_ci95": [
+            2.6754220376826302e-06,
+            4.9688324109390514e-06
+          ]
+        },
+        "frozen_excess": {
+          "mean": 2.390821980257021e-05,
+          "descriptive_ci95": [
+            1.943245311621302e-05,
+            2.89134263672833e-05
+          ]
+        },
+        "projected_total": {
+          "mean": 0.010446172652966022,
+          "descriptive_ci95": [
+            0.01044495805158371,
+            0.010447567893564064
+          ]
+        },
+        "frozen_total": {
+          "mean": 0.010466357401478636,
+          "descriptive_ci95": [
+            0.010462016289851397,
+            0.010471228309367845
+          ]
+        },
+        "category_oracle": {
+          "mean": 0.010439433215661688,
+          "descriptive_ci95": [
+            0.010439341483906076,
+            0.010439522193836466
+          ]
+        },
+        "future_noise_fraction": {
+          "ratio_of_means": 0.9576297500731482,
+          "descriptive_ci95": [
+            0.9575703220096587,
+            0.9576850967899384
+          ]
+        },
+        "projection_improvement_fraction": {
+          "ratio_of_means": 0.0003564435907441607,
+          "descriptive_ci95": [
+            0.000256147231920866,
+            0.00047561100366351374
+          ]
+        },
+        "frozen_improvement_fraction": {
+          "ratio_of_means": 0.0022842923173245137,
+          "descriptive_ci95": [
+            0.0018574010594352664,
+            0.002761296347572552
+          ]
+        },
+        "category_information_fraction": {
+          "ratio_of_means": 0.0002888178780576868,
+          "descriptive_ci95": [
+            0.00023084836145689347,
+            0.00035117523550917185
+          ]
+        }
+      },
+      "all_forecast_paths_exactly_equal_to_frozen": true,
+      "all_type_paths_exactly_equal_to_frozen": true
+    },
+    "zero": {
+      "disclosed_seed_blocks": 128,
+      "per_origin_rows": 1280,
+      "frozen_csv_sha256_canonical_text": "44c0a07b2cbdd8b214e783fbb8e8064b6c625877f0802d9a96ca37dacd038640",
+      "max_frozen_metric_error": 0.0,
+      "max_decomposition_identity_error": 0.0,
+      "by_origin": {
+        "0": {
+          "future": 0.01,
+          "within_type": 0.0,
+          "type_information": 0.0,
+          "bayes": 0.01,
+          "projected_excess": 0.0,
+          "frozen_excess": 0.0,
+          "projected_total": 0.01,
+          "frozen_total": 0.01,
+          "category_oracle": 0.01
+        },
+        "1": {
+          "future": 0.01,
+          "within_type": 0.0,
+          "type_information": 0.0,
+          "bayes": 0.01,
+          "projected_excess": 0.0,
+          "frozen_excess": 0.0,
+          "projected_total": 0.01,
+          "frozen_total": 0.01,
+          "category_oracle": 0.01
+        },
+        "2": {
+          "future": 0.01,
+          "within_type": 0.0,
+          "type_information": 0.0,
+          "bayes": 0.01,
+          "projected_excess": 0.0,
+          "frozen_excess": 0.0,
+          "projected_total": 0.01,
+          "frozen_total": 0.01,
+          "category_oracle": 0.01
+        },
+        "3": {
+          "future": 0.01,
+          "within_type": 0.0,
+          "type_information": 0.0,
+          "bayes": 0.01,
+          "projected_excess": 0.0,
+          "frozen_excess": 0.0,
+          "projected_total": 0.01,
+          "frozen_total": 0.01,
+          "category_oracle": 0.01
+        },
+        "4": {
+          "future": 0.01,
+          "within_type": 0.0,
+          "type_information": 0.0,
+          "bayes": 0.01,
+          "projected_excess": 0.0,
+          "frozen_excess": 0.0,
+          "projected_total": 0.01,
+          "frozen_total": 0.01,
+          "category_oracle": 0.01
+        }
+      },
+      "delayed_origins_1_to_4": {
+        "future": {
+          "mean": 0.01,
+          "descriptive_ci95": [
+            0.01,
+            0.01
+          ]
+        },
+        "within_type": {
+          "mean": 0.0,
+          "descriptive_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "type_information": {
+          "mean": 0.0,
+          "descriptive_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "bayes": {
+          "mean": 0.01,
+          "descriptive_ci95": [
+            0.01,
+            0.01
+          ]
+        },
+        "projected_excess": {
+          "mean": 0.0,
+          "descriptive_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "frozen_excess": {
+          "mean": 0.0,
+          "descriptive_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "projected_total": {
+          "mean": 0.01,
+          "descriptive_ci95": [
+            0.01,
+            0.01
+          ]
+        },
+        "frozen_total": {
+          "mean": 0.01,
+          "descriptive_ci95": [
+            0.01,
+            0.01
+          ]
+        },
+        "category_oracle": {
+          "mean": 0.01,
+          "descriptive_ci95": [
+            0.01,
+            0.01
+          ]
+        },
+        "future_noise_fraction": {
+          "ratio_of_means": 1.0,
+          "descriptive_ci95": [
+            1.0,
+            1.0
+          ]
+        },
+        "projection_improvement_fraction": {
+          "ratio_of_means": 0.0,
+          "descriptive_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "frozen_improvement_fraction": {
+          "ratio_of_means": 0.0,
+          "descriptive_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "category_information_fraction": {
+          "ratio_of_means": 0.0,
+          "descriptive_ci95": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "all_forecast_paths_exactly_equal_to_frozen": true,
+      "all_type_paths_exactly_equal_to_frozen": true
+    }
+  },
+  "output_equality_semantics": "Exact numerical array equality including matching NaN positions, not a byte-level comparison",
+  "metadata_label_correction": {
+    "description": "Post-run label-only correction: bitwise_equal renamed exactly_equal to match numpy.array_equal; no numeric risk, score, check result, or original v2 artifact changed. source_tree_at_run records the executed pre-correction code.",
+    "original_summary_canonical_sha256": "3322ffff53559bac820cb5df5cf92aa02a7e498cb697d4c079084b00d78da207"
+  }
+}
