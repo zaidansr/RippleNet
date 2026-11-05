@@ -1,5 +1,7 @@
 # Results audit
 
+**Historical initial audit.** A subsequent benchmark now supplies new synthetic results: see [experiment v1 findings](experiment-v1-results.md). The undetermined verdicts below describe the evidence available before that run, not its current outcome.
+
 No pre-existing RippleNet result tables, trained model, ablations, or seed-level losses were located in the searched workspace files, connected Drive search, or accessible zaidansr repository list. This is a bounded search, not proof that no results exist anywhere. The repository was newly created during this work.
 
 ## Verdict on the requested scientific conclusions

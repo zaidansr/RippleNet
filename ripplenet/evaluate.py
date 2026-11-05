@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import csv
+import argparse
 import json
 import platform
 import subprocess
@@ -96,4 +97,6 @@ def evaluate(output: Path = Path("results/experiment-v1")) -> dict[str, object]:
 
 
 if __name__ == "__main__":
-    evaluate()
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--output", type=Path, default=Path("results/experiment-v1"))
+    evaluate(parser.parse_args().output)

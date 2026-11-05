@@ -15,6 +15,8 @@ NumPy is sufficient for these low-dimensional linear operations. PyTorch would a
 
 ## Deliberate limits
 
+**Update after experiment v1:** `benchmark.py` now includes OLS fitting, clipped/adaptive heuristics, and an exact label-informed Gaussian comparator for the declared Gaussian impulses. `mixture.py` adds the collapsed causal mixture and matched branch-count ablations; `statistics.py` provides paired run-level intervals; `evaluate.py` saves the frozen held-out comparison, and `report.py` renders the saved results. The original omissions listed below describe the first diagnostic-only release. No neural network or full CE-BASS implementation has been added.
+
 The simulator has explicit intervention times, not a random event scheduler. It uses a zero initial state before finite burn-in; this approximates an ordinary stationary process. The diagnostic filter has a declared approximate initial covariance. Read-only NumPy arrays discourage accidental mutations but are not a security mechanism. Reproducibility is checked in the recorded environment; cross-version bitwise equality is not promised.
 
 The repository does not yet implement an OLS benchmark fit, robust filter, exact event-informed conditional mean, causal dual-mechanism filter, development selection, held-out statistical comparison, or trained neural network. These omissions prevent interpreting the diagnostic as the complete pilot.

@@ -1,5 +1,7 @@
 # Agreed pilot and review recommendations
 
+**Status:** the original diagnostic was followed by [experiment v1](experiment-v1.md) and its [held-out findings](experiment-v1-results.md). The frozen collapsed-mixture candidate failed the improvement gate. Statements below describing missing comparisons refer to the initial diagnostic-only release.
+
 ## Agreed scope
 
 Seven days, approximately 10–15 focused hours. Three synthetic assets; next-step latent returns predicted using observations available by the forecast origin. Known stable dynamics and ordinary noise parameters for the initial filters. Disturbances are isolated, with matched distributions of initial magnitudes and affected assets. Moderate, weak, and zero persistence are tested.
