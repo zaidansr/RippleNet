@@ -1,5 +1,7 @@
 # Component choice and implementation assumptions
 
+**V2 update:** the subagent-built `history.py` retains an exact two-component posterior under shared known timing; `history_statistics.py` implements five-contrast paired inference. Root integration is in `history_experiment.py`, with reporting in `history_report.py`. New invariant tests bring the suite to 45. See [v2 results](experiment-v2-results.md) and its independent audits. V1 data and numerical findings remain unchanged.
+
 No existing component implementation was located, and the request left [COMPONENT] unspecified. The selected first component is the seeded synthetic simulator, with an ordinary causal Kalman filter as a diagnostic consumer. The mathematical concept selected for tutoring is the distinction between observation corruption and state shocks. The selected paper is explicitly identified in paper-analysis.md.
 
 Before writing code, the engineering review identified these requirements: stable transitions; finite symmetric positive-semidefinite covariances; explicit return-versus-price corruption semantics; one-time impulse application; known parameter privileges; correct next-step indexing; independent ordinary noise streams; private event metadata; complete separated scoring windows; and a declared burn-in convention. Those assumptions are documented in the simulator before its implementation.
