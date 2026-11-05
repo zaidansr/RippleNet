@@ -21,6 +21,13 @@ normalized log probabilities, columns [observation, state], and remain in log
 space for proper scoring without probability clipping. Arrays before tau are
 NaN because this diagnostic does not estimate pre-event category probabilities.
 No random draws occur in filtering; reproducibility comes from input data.
+
+The additional risk instrumentation is model-conditional and exploratory. For
+t >= tau it decomposes latent next-return squared-error Bayes risk into future
+process noise, within-type state uncertainty, and unresolved-type uncertainty,
+each normalized by the number of assets. Future measurement noise R is absent
+because the target is the latent state, not the next recorded observation.
+Risk calculations do not feed back into any forecast or log-weight update.
 """
 
 from __future__ import annotations
@@ -45,6 +52,10 @@ class HistoryResult:
     forecasts: dict[str, Array]
     state_probability: Array
     log_type_probabilities: Array
+    future_innovation_risk: Array
+    within_type_state_risk: Array
+    type_information_risk: Array
+    bayes_risk: Array
 
 
 def _normalized_logs(log_weights: Array) -> Array:
@@ -135,6 +146,10 @@ def known_time_forecasts(
     forecasts = {name: np.empty((count, config.n_assets)) for name in names}
     state_probability = np.full(count, np.nan)
     log_probabilities = np.full((count, 2), np.nan)
+    future_innovation_risk = np.full(count, np.nan)
+    within_type_state_risk = np.full(count, np.nan)
+    type_information_risk = np.full(count, np.nan)
+    bayes_risk = np.full(count, np.nan)
     mean, covariance = np.zeros(config.n_assets), initial_covariance(config)
     means = np.empty((2, config.n_assets))
     covariances = np.empty((2, config.n_assets, config.n_assets))
@@ -175,6 +190,28 @@ def known_time_forecasts(
         state_probability[time] = weights[1]
         log_probabilities[time] = log_weights
 
-    for output in (*forecasts.values(), state_probability, log_probabilities):
+        # Diagnostic only: these operations never mutate the filtering state.
+        future_innovation_risk[time] = np.trace(q) / config.n_assets
+        within_type_state_risk[time] = sum(
+            weight * np.trace(a @ branch_covariance @ a.T)
+            for weight, branch_covariance in zip(weights, covariances)
+        ) / config.n_assets
+        type_difference = a @ (means[1] - means[0])
+        type_information_risk[time] = (
+            weights[0] * weights[1] * (type_difference @ type_difference)
+            / config.n_assets
+        )
+        bayes_risk[time] = (
+            future_innovation_risk[time] + within_type_state_risk[time]
+            + type_information_risk[time]
+        )
+
+    for output in (
+        *forecasts.values(), state_probability, log_probabilities,
+        future_innovation_risk, within_type_state_risk, type_information_risk, bayes_risk,
+    ):
         output.setflags(write=False)
-    return HistoryResult(forecasts, state_probability, log_probabilities)
+    return HistoryResult(
+        forecasts, state_probability, log_probabilities,
+        future_innovation_risk, within_type_state_risk, type_information_risk, bayes_risk,
+    )
