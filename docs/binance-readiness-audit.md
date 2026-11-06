@@ -63,3 +63,9 @@ An importer could honestly evaluate a frozen **recorded-file** next-trade target
 An original as-of forecasting claim remains blocked until there is evidence for contemporaneous availability and revision handling. It cannot be repaired merely by sorting this file by event time, freezing its current hash, using contiguous IDs, or applying a chronological split. A recording-error classification claim additionally requires independently defensible error labels and their announcement times; genuine-shock labels and counterfactual clean prices are also absent.
 
 The single preselected early trading day is a plumbing sample, not a justified training corpus or generalization test. No model, predictive result, operational latency claim, or financial usefulness conclusion is warranted by this inspection. No larger sample, alternative date or provider was automatically substituted.
+
+## Offline import revalidation
+
+The subsequent [offline importer](archive-import-results.md) processed the same private local ZIP with its previously recorded expected SHA256, explicit millisecond unit, declared UTC date and a two-retrieved-row engineering horizon. There was no new download or dataset substitution. Both input and CSV hashes matched the earlier inspection.
+
+All 3,427 recorded trades produced origins. There were 3,425 completed recorded-return targets and two censored suffix targets at normal EOF, no pending or unavailable targets, and no source-ID gap steps. These are coverage/alignment counts, not forecasts, effect sizes or independently verified market labels. Correction supervision remained explicitly unsupported. The local JSON report contains provenance and coverage only and remains outside the repository. This supplement is covered by this document's Binance Vision attribution and CC BY-NC-SA 4.0 notice above.

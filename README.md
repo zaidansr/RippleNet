@@ -6,7 +6,9 @@ This repository tests a proposed distinction between observation corruption and 
 
 ## Current results
 
-The next engineering stage adds an immutable replay component with delayed-label and censoring checks; all 69 tests pass. A bounded public trade-archive inspection supports schema work but does not establish original online availability or error/shock labels. No real-data predictor was fitted. [Replay implementation and readiness outcome](docs/replay-readiness-results.md).
+The offline archive importer now preserves retrieved row order, explicit units, provenance and incomplete targets while refusing unsupported correction labels. It passed a local check on the already inspected sample; all 82 repository tests pass. This is engineering validation, with no real-data model fitted. [Importer and target-attachment results](docs/archive-import-results.md).
+
+The earlier engineering stage added an immutable replay component with delayed-label and censoring checks, passing 69 tests at that stage. A bounded public trade-archive inspection supports schema work but does not establish original online availability or error/shock labels. [Replay implementation and readiness outcome](docs/replay-readiness-results.md).
 
 The real-data feasibility audit does not establish a valid test of the original error-versus-shock mechanism. Three subagents reviewed public sources, target/availability mathematics, and an actual bounded sample's schema. An observable-target replay is a separate conditional engineering step; no real-data model was fitted. [Research decision and next discriminating experiment](docs/real-data-feasibility-decision.md).
 
@@ -57,6 +59,7 @@ To reproduce the frozen benchmark into a separate directory, run `python -m ripp
 - [Replay implementation and readiness](docs/replay-readiness-results.md): implemented prefix boundary, 69-test validation and the remaining evidence gate.
 - [Replay mathematical contract](docs/replay-contract.md): ordinal horizons, fixed-window labels, training cutoffs and censoring.
 - [Binance recorded-file audit](docs/binance-readiness-audit.md): preselected bounded inspection, provenance and source-specific attribution/license notice.
+- [Offline archive importer](docs/archive-import-results.md): strict source parsing, retained target coverage, 82-test validation and the independent review.
 
 To reproduce v2 into a separate directory, run `python -m ripplenet.history_experiment --stage final --output work/v2-reproduction`. This repeats disclosed seeds and does not supply a new independent test.
 
