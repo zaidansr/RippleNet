@@ -6,6 +6,8 @@ This repository tests a proposed distinction between observation corruption and 
 
 ## Current results
 
+The real-data feasibility audit does not establish a valid test of the original error-versus-shock mechanism. Three subagents reviewed public sources, target/availability mathematics, and an actual bounded sample's schema. An observable-target replay is a separate conditional engineering step; no real-data model was fitted. [Research decision and next discriminating experiment](docs/real-data-feasibility-decision.md).
+
 The complete five-cell observation-noise sensitivity reports retention gains of approximately 0%, 0.0217%, 0.1116%, 0.1342%, and 0.0784%. Every five-cell-adjusted upper bound is below 0.23%, far below the 5% target. Increasing observation noise does not justify growing the architecture for this frozen task. [Full sensitivity report, figure and independent audits](docs/noise-sensitivity-results.md).
 
 An exploratory conditional-risk reconstruction explains the v2 outcome: future innovations account for 95.763% of delayed Bayes risk, while exact retention improves conditional risk over projection by only 0.03564%. Even perfect current-state information would permit at most 4.27116% improvement over projection on these disclosed histories under the assumed model, below the 5% target. Original forecasts and stored scores were reproduced exactly. [Risk decomposition and independent reviews](docs/conditional-risk-results.md).
@@ -46,6 +48,10 @@ To reproduce the frozen benchmark into a separate directory, run `python -m ripp
 - [V2 results](docs/experiment-v2-results.md): 128-seed findings with independent statistical and engineering reviews.
 - [Exploratory conditional-risk analysis](docs/conditional-risk-results.md): noise floor, approximation excess, timing, and oracle headroom; this reuses disclosed histories and is not a fresh test.
 - [Observation-noise sensitivity](docs/noise-sensitivity-results.md): all five fixed cells, 128 new paired seed blocks, source checks, scientific figure, and independent audits.
+- [Real-data feasibility decision](docs/real-data-feasibility-decision.md): limits of the current evidence, the data-readiness contract, and the next information ablation.
+- [Public-data source audit](docs/public-data-audit.md): official exchange/book candidates, correction semantics, timing and use constraints.
+- [Observable-target audit](docs/observable-target-audit.md): causal information sets, delayed labels, observable returns and information-versus-model comparisons.
+- [Data-engineering feasibility](docs/data-engineering-feasibility.md): bounded sample schema inspection, private-data handling and additional documented sources.
 
 To reproduce v2 into a separate directory, run `python -m ripplenet.history_experiment --stage final --output work/v2-reproduction`. This repeats disclosed seeds and does not supply a new independent test.
 
