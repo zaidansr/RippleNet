@@ -1,0 +1,547 @@
+{
+  "scope": "new conditional scalar synthetic information diagnostic; no market validation",
+  "plan_public_commit": "41a72bf237848e787d497f7c929e4e69674b7eb3",
+  "source_tree_at_run": "baad130acbee91615b54f61d97a68e1dc22dc080",
+  "source_sha256": {
+    "ripplenet/information.py": "8933daa7e37a15595d7e60220700439e7ab285c2f24f427bdc4bc3823fd6c27d",
+    "ripplenet/information_experiment.py": "737bab837a09782bb514aa14008f604d10135e10cf9ddbbc3d4ccd148b5e94bc",
+    "docs/information-diagnostic-plan.md": "65804b0bedd0b1b24c97c519e674ac19456bd387002a19e1a0ef1fdf7df8bad0"
+  },
+  "runtime": {
+    "python": "3.13.3",
+    "numpy": "2.3.2"
+  },
+  "orders": [
+    24,
+    48,
+    96,
+    192
+  ],
+  "tolerances": {
+    "absolute_risk_gap": 1e-06,
+    "relative_percentage_points": 0.01,
+    "identity": 1e-06
+  },
+  "cases": [
+    {
+      "name": "clean",
+      "config": {
+        "a": 0.6,
+        "process_variance": 0.01,
+        "base_variance": 0.015625,
+        "measurement_variance": 0.0025,
+        "disturbance_variance": 0.25,
+        "auxiliary_variance": 0.0025
+      },
+      "mode": "clean",
+      "rows": [
+        {
+          "mode": "clean",
+          "order": 24,
+          "primary_risk": 0.034073426573426574,
+          "full_risk": 0.01067134435523581,
+          "linear_risk": 0.010867565524193549,
+          "quadrature_primary_risk": 0.034073426573426574,
+          "quadrature_linear_risk": 0.010867938061136796,
+          "information_gain": 0.023403084345924086,
+          "approximation_gain": 0.0001965937059009861,
+          "primary_risk_identity_residual": -1.0021277333238654e-06,
+          "linear_risk_identity_residual": -3.7253694324778774e-07,
+          "primary_quadrature_residual": 0.0,
+          "quadrature_weight_residual": 0.0,
+          "information_gain_percent": 68.68427011733492,
+          "approximation_gain_percent": 1.8089948982900177
+        },
+        {
+          "mode": "clean",
+          "order": 48,
+          "primary_risk": 0.034073426573426574,
+          "full_risk": 0.010670786882497493,
+          "linear_risk": 0.010867565524193549,
+          "quadrature_primary_risk": 0.03407342657342658,
+          "quadrature_linear_risk": 0.010867540646275552,
+          "information_gain": 0.0234026058595136,
+          "approximation_gain": 0.00019675376377805865,
+          "primary_risk_identity_residual": 3.3831415481577753e-08,
+          "linear_risk_identity_residual": 2.4877917996897437e-08,
+          "primary_quadrature_residual": -6.938893903907228e-18,
+          "quadrature_weight_residual": 0.0,
+          "information_gain_percent": 68.68286583705377,
+          "approximation_gain_percent": 1.8104677017133437
+        },
+        {
+          "mode": "clean",
+          "order": 96,
+          "primary_risk": 0.034073426573426574,
+          "full_risk": 0.010670977281265108,
+          "linear_risk": 0.010867565524193549,
+          "quadrature_primary_risk": 0.03407342657342657,
+          "quadrature_linear_risk": 0.010867565260223198,
+          "information_gain": 0.023402449707224778,
+          "approximation_gain": 0.00019658797895808926,
+          "primary_risk_identity_residual": -4.150633101107637e-10,
+          "linear_risk_identity_residual": 2.639703512740711e-10,
+          "primary_quadrature_residual": 6.938893903907228e-18,
+          "quadrature_weight_residual": 0.0,
+          "information_gain_percent": 68.6824075553236,
+          "approximation_gain_percent": 1.8089422007205012
+        },
+        {
+          "mode": "clean",
+          "order": 192,
+          "primary_risk": 0.034073426573426574,
+          "full_risk": 0.010670977160892135,
+          "linear_risk": 0.010867565524193549,
+          "quadrature_primary_risk": 0.034073426573426546,
+          "quadrature_linear_risk": 0.01086756552288746,
+          "information_gain": 0.023402449407964127,
+          "approximation_gain": 0.00019658836199532535,
+          "primary_risk_identity_residual": 4.570312878149352e-12,
+          "linear_risk_identity_residual": 1.3060889175742219e-12,
+          "primary_quadrature_residual": 2.7755575615628914e-17,
+          "quadrature_weight_residual": -4.440892098500626e-16,
+          "information_gain_percent": 68.68240667704197,
+          "approximation_gain_percent": 1.8089457253114987
+        }
+      ],
+      "convergence": {
+        "status": "resolved_at_declared_tolerance",
+        "absolute_96_192_differences": {
+          "primary_risk": 0.0,
+          "full_risk": 1.2037297374145606e-10,
+          "linear_risk": 0.0,
+          "quadrature_primary_risk": 2.0816681711721685e-17,
+          "quadrature_linear_risk": 2.626642618686059e-10,
+          "information_gain": 2.9926065098218047e-10,
+          "approximation_gain": 3.8303723609795295e-10
+        },
+        "percentage_point_96_192_differences": {
+          "information_gain_percent": 8.782816394159454e-07,
+          "approximation_gain_percent": 3.5245909975056833e-06
+        },
+        "final_absolute_residuals": {
+          "primary_risk_identity_residual": 4.570312878149352e-12,
+          "linear_risk_identity_residual": 1.3060889175742219e-12,
+          "primary_quadrature_residual": 2.7755575615628914e-17,
+          "quadrature_weight_residual": 4.440892098500626e-16
+        }
+      }
+    },
+    {
+      "name": "shared",
+      "config": {
+        "a": 0.6,
+        "process_variance": 0.01,
+        "base_variance": 0.015625,
+        "measurement_variance": 0.0025,
+        "disturbance_variance": 0.25,
+        "auxiliary_variance": 0.0025
+      },
+      "mode": "shared",
+      "rows": [
+        {
+          "mode": "shared",
+          "order": 24,
+          "primary_risk": 0.034073426573426574,
+          "full_risk": 0.03394906323185012,
+          "linear_risk": 0.03394906323185012,
+          "quadrature_primary_risk": 0.034073426573426574,
+          "quadrature_linear_risk": 0.03394906323185012,
+          "information_gain": 0.00012436334157645522,
+          "approximation_gain": 1.8600950505146495e-32,
+          "primary_risk_identity_residual": 1.734723475976807e-18,
+          "linear_risk_identity_residual": -1.8600950505146495e-32,
+          "primary_quadrature_residual": 0.0,
+          "quadrature_weight_residual": 0.0,
+          "information_gain_percent": 0.3649863077564514,
+          "approximation_gain_percent": 5.47907622019319e-29
+        },
+        {
+          "mode": "shared",
+          "order": 48,
+          "primary_risk": 0.034073426573426574,
+          "full_risk": 0.033949063231850124,
+          "linear_risk": 0.03394906323185012,
+          "quadrature_primary_risk": 0.03407342657342658,
+          "quadrature_linear_risk": 0.033949063231850124,
+          "information_gain": 0.00012436334157645522,
+          "approximation_gain": 1.7738037963119344e-32,
+          "primary_risk_identity_residual": -5.204170427930421e-18,
+          "linear_risk_identity_residual": -6.938893903907247e-18,
+          "primary_quadrature_residual": -6.938893903907228e-18,
+          "quadrature_weight_residual": 0.0,
+          "information_gain_percent": 0.3649863077564514,
+          "approximation_gain_percent": 5.224897618523384e-29
+        },
+        {
+          "mode": "shared",
+          "order": 96,
+          "primary_risk": 0.034073426573426574,
+          "full_risk": 0.03394906323185011,
+          "linear_risk": 0.03394906323185012,
+          "quadrature_primary_risk": 0.03407342657342657,
+          "quadrature_linear_risk": 0.03394906323185011,
+          "information_gain": 0.00012436334157645506,
+          "approximation_gain": 1.804862042187856e-32,
+          "primary_risk_identity_residual": 8.836247705756861e-18,
+          "linear_risk_identity_residual": 6.938893903907211e-18,
+          "primary_quadrature_residual": 6.938893903907228e-18,
+          "quadrature_weight_residual": 0.0,
+          "information_gain_percent": 0.36498630775645097,
+          "approximation_gain_percent": 5.316382457630177e-29
+        },
+        {
+          "mode": "shared",
+          "order": 192,
+          "primary_risk": 0.034073426573426574,
+          "full_risk": 0.03394906323185009,
+          "linear_risk": 0.03394906323185012,
+          "quadrature_primary_risk": 0.034073426573426546,
+          "quadrature_linear_risk": 0.03394906323185009,
+          "information_gain": 0.00012436334157645508,
+          "approximation_gain": 1.7640011523996773e-32,
+          "primary_risk_identity_residual": 2.962582436316641e-17,
+          "linear_risk_identity_residual": 2.7755575615628895e-17,
+          "primary_quadrature_residual": 2.7755575615628914e-17,
+          "quadrature_weight_residual": -4.440892098500626e-16,
+          "information_gain_percent": 0.364986307756451,
+          "approximation_gain_percent": 5.19602305475321e-29
+        }
+      ],
+      "convergence": {
+        "status": "resolved_at_declared_tolerance",
+        "absolute_96_192_differences": {
+          "primary_risk": 0.0,
+          "full_risk": 2.0816681711721685e-17,
+          "linear_risk": 0.0,
+          "quadrature_primary_risk": 2.0816681711721685e-17,
+          "quadrature_linear_risk": 2.0816681711721685e-17,
+          "information_gain": 2.710505431213761e-20,
+          "approximation_gain": 4.086088978817874e-34
+        },
+        "percentage_point_96_192_differences": {
+          "information_gain_percent": 5.551115123125783e-17,
+          "approximation_gain_percent": 1.2035940287696657e-30
+        },
+        "final_absolute_residuals": {
+          "primary_risk_identity_residual": 2.962582436316641e-17,
+          "linear_risk_identity_residual": 2.7755575615628895e-17,
+          "primary_quadrature_residual": 2.7755575615628914e-17,
+          "quadrature_weight_residual": 4.440892098500626e-16
+        }
+      }
+    },
+    {
+      "name": "duplicate",
+      "config": {
+        "a": 0.6,
+        "process_variance": 0.01,
+        "base_variance": 0.015625,
+        "measurement_variance": 0.0025,
+        "disturbance_variance": 0.25,
+        "auxiliary_variance": 0.0025
+      },
+      "mode": "duplicate",
+      "rows": [
+        {
+          "mode": "duplicate",
+          "order": 24,
+          "primary_risk": 0.034073426573426574,
+          "full_risk": 0.034073426573426574,
+          "linear_risk": 0.034073426573426574,
+          "quadrature_primary_risk": 0.034073426573426574,
+          "quadrature_linear_risk": 0.034073426573426574,
+          "information_gain": 0.0,
+          "approximation_gain": 1.9943070773850142e-33,
+          "primary_risk_identity_residual": 0.0,
+          "linear_risk_identity_residual": -1.9943070773850142e-33,
+          "primary_quadrature_residual": 0.0,
+          "quadrature_weight_residual": 0.0,
+          "information_gain_percent": 0.0,
+          "approximation_gain_percent": 5.852968949534264e-30
+        },
+        {
+          "mode": "duplicate",
+          "order": 48,
+          "primary_risk": 0.034073426573426574,
+          "full_risk": 0.03407342657342658,
+          "linear_risk": 0.034073426573426574,
+          "quadrature_primary_risk": 0.03407342657342658,
+          "quadrature_linear_risk": 0.03407342657342658,
+          "information_gain": 0.0,
+          "approximation_gain": 1.3269361673306458e-33,
+          "primary_risk_identity_residual": -6.938893903907228e-18,
+          "linear_risk_identity_residual": -6.93889390390723e-18,
+          "primary_quadrature_residual": -6.938893903907228e-18,
+          "quadrature_weight_residual": 0.0,
+          "information_gain_percent": 0.0,
+          "approximation_gain_percent": 3.894343189908309e-30
+        },
+        {
+          "mode": "duplicate",
+          "order": 96,
+          "primary_risk": 0.034073426573426574,
+          "full_risk": 0.03407342657342657,
+          "linear_risk": 0.034073426573426574,
+          "quadrature_primary_risk": 0.03407342657342657,
+          "quadrature_linear_risk": 0.03407342657342657,
+          "information_gain": 0.0,
+          "approximation_gain": 1.352232031255369e-33,
+          "primary_risk_identity_residual": 6.938893903907228e-18,
+          "linear_risk_identity_residual": 6.938893903907227e-18,
+          "primary_quadrature_residual": 6.938893903907228e-18,
+          "quadrature_weight_residual": 0.0,
+          "information_gain_percent": 0.0,
+          "approximation_gain_percent": 3.968582462175839e-30
+        },
+        {
+          "mode": "duplicate",
+          "order": 192,
+          "primary_risk": 0.034073426573426574,
+          "full_risk": 0.034073426573426546,
+          "linear_risk": 0.034073426573426574,
+          "quadrature_primary_risk": 0.034073426573426546,
+          "quadrature_linear_risk": 0.034073426573426546,
+          "information_gain": 0.0,
+          "approximation_gain": 1.2993874547626633e-33,
+          "primary_risk_identity_residual": 2.7755575615628914e-17,
+          "linear_risk_identity_residual": 2.7755575615628914e-17,
+          "primary_quadrature_residual": 2.7755575615628914e-17,
+          "quadrature_weight_residual": -4.440892098500626e-16,
+          "information_gain_percent": 0.0,
+          "approximation_gain_percent": 3.813492170981238e-30
+        }
+      ],
+      "convergence": {
+        "status": "resolved_at_declared_tolerance",
+        "absolute_96_192_differences": {
+          "primary_risk": 0.0,
+          "full_risk": 2.0816681711721685e-17,
+          "linear_risk": 0.0,
+          "quadrature_primary_risk": 2.0816681711721685e-17,
+          "quadrature_linear_risk": 2.0816681711721685e-17,
+          "information_gain": 0.0,
+          "approximation_gain": 5.284457649270568e-35
+        },
+        "percentage_point_96_192_differences": {
+          "information_gain_percent": 0.0,
+          "approximation_gain_percent": 1.550902911946012e-31
+        },
+        "final_absolute_residuals": {
+          "primary_risk_identity_residual": 2.7755575615628914e-17,
+          "linear_risk_identity_residual": 2.7755575615628914e-17,
+          "primary_quadrature_residual": 2.7755575615628914e-17,
+          "quadrature_weight_residual": 4.440892098500626e-16
+        }
+      }
+    },
+    {
+      "name": "perfect",
+      "config": {
+        "a": 0.6,
+        "process_variance": 0.01,
+        "base_variance": 0.015625,
+        "measurement_variance": 0.0025,
+        "disturbance_variance": 0.25,
+        "auxiliary_variance": 0.0
+      },
+      "mode": "clean",
+      "rows": [
+        {
+          "mode": "clean",
+          "order": 24,
+          "primary_risk": 0.034073426573426574,
+          "full_risk": 0.01,
+          "linear_risk": 0.01,
+          "quadrature_primary_risk": 0.034073426573426574,
+          "quadrature_linear_risk": 0.01,
+          "information_gain": 0.02407342657342658,
+          "approximation_gain": 0.0,
+          "primary_risk_identity_residual": -6.938893903907228e-18,
+          "linear_risk_identity_residual": 0.0,
+          "primary_quadrature_residual": 0.0,
+          "quadrature_weight_residual": 0.0,
+          "information_gain_percent": 70.65161621344281,
+          "approximation_gain_percent": 0.0
+        },
+        {
+          "mode": "clean",
+          "order": 48,
+          "primary_risk": 0.034073426573426574,
+          "full_risk": 0.009999999999999998,
+          "linear_risk": 0.01,
+          "quadrature_primary_risk": 0.03407342657342658,
+          "quadrature_linear_risk": 0.009999999999999998,
+          "information_gain": 0.024073426573426586,
+          "approximation_gain": 0.0,
+          "primary_risk_identity_residual": -1.0408340855860843e-17,
+          "linear_risk_identity_residual": 1.734723475976807e-18,
+          "primary_quadrature_residual": -6.938893903907228e-18,
+          "quadrature_weight_residual": 0.0,
+          "information_gain_percent": 70.65161621344282,
+          "approximation_gain_percent": 0.0
+        },
+        {
+          "mode": "clean",
+          "order": 96,
+          "primary_risk": 0.034073426573426574,
+          "full_risk": 0.009999999999999998,
+          "linear_risk": 0.01,
+          "quadrature_primary_risk": 0.03407342657342657,
+          "quadrature_linear_risk": 0.009999999999999998,
+          "information_gain": 0.02407342657342657,
+          "approximation_gain": 0.0,
+          "primary_risk_identity_residual": 6.938893903907228e-18,
+          "linear_risk_identity_residual": 1.734723475976807e-18,
+          "primary_quadrature_residual": 6.938893903907228e-18,
+          "quadrature_weight_residual": 0.0,
+          "information_gain_percent": 70.65161621344278,
+          "approximation_gain_percent": 0.0
+        },
+        {
+          "mode": "clean",
+          "order": 192,
+          "primary_risk": 0.034073426573426574,
+          "full_risk": 0.009999999999999995,
+          "linear_risk": 0.01,
+          "quadrature_primary_risk": 0.034073426573426546,
+          "quadrature_linear_risk": 0.009999999999999995,
+          "information_gain": 0.02407342657342655,
+          "approximation_gain": 0.0,
+          "primary_risk_identity_residual": 2.7755575615628914e-17,
+          "linear_risk_identity_residual": 5.204170427930421e-18,
+          "primary_quadrature_residual": 2.7755575615628914e-17,
+          "quadrature_weight_residual": -4.440892098500626e-16,
+          "information_gain_percent": 70.65161621344274,
+          "approximation_gain_percent": 0.0
+        }
+      ],
+      "convergence": {
+        "status": "resolved_at_declared_tolerance",
+        "absolute_96_192_differences": {
+          "primary_risk": 0.0,
+          "full_risk": 3.469446951953614e-18,
+          "linear_risk": 0.0,
+          "quadrature_primary_risk": 2.0816681711721685e-17,
+          "quadrature_linear_risk": 3.469446951953614e-18,
+          "information_gain": 1.734723475976807e-17,
+          "approximation_gain": 0.0
+        },
+        "percentage_point_96_192_differences": {
+          "information_gain_percent": 4.263256414560601e-14,
+          "approximation_gain_percent": 0.0
+        },
+        "final_absolute_residuals": {
+          "primary_risk_identity_residual": 2.7755575615628914e-17,
+          "linear_risk_identity_residual": 5.204170427930421e-18,
+          "primary_quadrature_residual": 2.7755575615628914e-17,
+          "quadrature_weight_residual": 4.440892098500626e-16
+        }
+      }
+    },
+    {
+      "name": "zero_a",
+      "config": {
+        "a": 0.0,
+        "process_variance": 0.01,
+        "base_variance": 0.015625,
+        "measurement_variance": 0.0025,
+        "disturbance_variance": 0.25,
+        "auxiliary_variance": 0.0025
+      },
+      "mode": "clean",
+      "rows": [
+        {
+          "mode": "clean",
+          "order": 24,
+          "primary_risk": 0.01,
+          "full_risk": 0.01,
+          "linear_risk": 0.01,
+          "quadrature_primary_risk": 0.01,
+          "quadrature_linear_risk": 0.01,
+          "information_gain": 0.0,
+          "approximation_gain": 0.0,
+          "primary_risk_identity_residual": 0.0,
+          "linear_risk_identity_residual": 0.0,
+          "primary_quadrature_residual": 0.0,
+          "quadrature_weight_residual": 0.0,
+          "information_gain_percent": 0.0,
+          "approximation_gain_percent": 0.0
+        },
+        {
+          "mode": "clean",
+          "order": 48,
+          "primary_risk": 0.01,
+          "full_risk": 0.009999999999999998,
+          "linear_risk": 0.01,
+          "quadrature_primary_risk": 0.009999999999999998,
+          "quadrature_linear_risk": 0.009999999999999998,
+          "information_gain": 0.0,
+          "approximation_gain": 0.0,
+          "primary_risk_identity_residual": 1.734723475976807e-18,
+          "linear_risk_identity_residual": 1.734723475976807e-18,
+          "primary_quadrature_residual": 1.734723475976807e-18,
+          "quadrature_weight_residual": 0.0,
+          "information_gain_percent": 0.0,
+          "approximation_gain_percent": 0.0
+        },
+        {
+          "mode": "clean",
+          "order": 96,
+          "primary_risk": 0.01,
+          "full_risk": 0.009999999999999998,
+          "linear_risk": 0.01,
+          "quadrature_primary_risk": 0.009999999999999998,
+          "quadrature_linear_risk": 0.009999999999999998,
+          "information_gain": 0.0,
+          "approximation_gain": 0.0,
+          "primary_risk_identity_residual": 1.734723475976807e-18,
+          "linear_risk_identity_residual": 1.734723475976807e-18,
+          "primary_quadrature_residual": 1.734723475976807e-18,
+          "quadrature_weight_residual": 0.0,
+          "information_gain_percent": 0.0,
+          "approximation_gain_percent": 0.0
+        },
+        {
+          "mode": "clean",
+          "order": 192,
+          "primary_risk": 0.01,
+          "full_risk": 0.009999999999999995,
+          "linear_risk": 0.01,
+          "quadrature_primary_risk": 0.009999999999999995,
+          "quadrature_linear_risk": 0.009999999999999995,
+          "information_gain": 0.0,
+          "approximation_gain": 0.0,
+          "primary_risk_identity_residual": 5.204170427930421e-18,
+          "linear_risk_identity_residual": 5.204170427930421e-18,
+          "primary_quadrature_residual": 5.204170427930421e-18,
+          "quadrature_weight_residual": -4.440892098500626e-16,
+          "information_gain_percent": 0.0,
+          "approximation_gain_percent": 0.0
+        }
+      ],
+      "convergence": {
+        "status": "resolved_at_declared_tolerance",
+        "absolute_96_192_differences": {
+          "primary_risk": 0.0,
+          "full_risk": 3.469446951953614e-18,
+          "linear_risk": 0.0,
+          "quadrature_primary_risk": 3.469446951953614e-18,
+          "quadrature_linear_risk": 3.469446951953614e-18,
+          "information_gain": 0.0,
+          "approximation_gain": 0.0
+        },
+        "percentage_point_96_192_differences": {
+          "information_gain_percent": 0.0,
+          "approximation_gain_percent": 0.0
+        },
+        "final_absolute_residuals": {
+          "primary_risk_identity_residual": 5.204170427930421e-18,
+          "linear_risk_identity_residual": 5.204170427930421e-18,
+          "primary_quadrature_residual": 5.204170427930421e-18,
+          "quadrature_weight_residual": 4.440892098500626e-16
+        }
+      }
+    }
+  ]
+}

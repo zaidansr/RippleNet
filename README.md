@@ -6,7 +6,7 @@ This repository tests a proposed distinction between observation corruption and 
 
 ## Current results
 
-The recommended next branch is a newly declared synthetic information-value diagnostic: compare an independent second measurement with same-input linear prediction, using duplicate/shared-disturbance controls. Its assumptions do not validate an available market signal. [Frozen plan](docs/information-diagnostic-plan.md). The current archive's original-availability and cause evidence gaps remain unmet; [frontier review](docs/research-frontier.md).
+The new scalar information diagnostic finds a 68.68% optimal-risk reduction from a stipulated clean second measurement. A linear predictor with those same inputs captures 99.16% of that improvement; exact nonlinear inference adds 1.81% relative to the full-input linear risk. All frozen numerical checks pass. This conditional synthetic result validates no real market sensor or architecture. [Results, controls and review](docs/information-diagnostic-results.md). The current archive's evidence gaps remain unmet.
 
 The offline archive importer now preserves retrieved row order, explicit units, provenance and incomplete targets while refusing unsupported correction labels. It passed a local check on the already inspected sample; all 82 repository tests pass. This is engineering validation, with no real-data model fitted. [Importer and target-attachment results](docs/archive-import-results.md).
 
@@ -63,6 +63,7 @@ To reproduce the frozen benchmark into a separate directory, run `python -m ripp
 - [Binance recorded-file audit](docs/binance-readiness-audit.md): preselected bounded inspection, provenance and source-specific attribution/license notice.
 - [Offline archive importer](docs/archive-import-results.md): strict source parsing, retained target coverage, 82-test validation and the independent review.
 - [Research frontier](docs/research-frontier.md): why the current evidence gate remains unmet and which new questions could follow.
+- [Auxiliary-information diagnostic](docs/information-diagnostic-results.md): frozen new scalar question, information versus same-input approximation gaps, analytic controls and all quadrature orders.
 
 To reproduce v2 into a separate directory, run `python -m ripplenet.history_experiment --stage final --output work/v2-reproduction`. This repeats disclosed seeds and does not supply a new independent test.
 
