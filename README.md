@@ -6,6 +6,8 @@ This repository tests a proposed distinction between observation corruption and 
 
 ## Current results
 
+The next engineering stage adds an immutable replay component with delayed-label and censoring checks; all 69 tests pass. A bounded public trade-archive inspection supports schema work but does not establish original online availability or error/shock labels. No real-data predictor was fitted. [Replay implementation and readiness outcome](docs/replay-readiness-results.md).
+
 The real-data feasibility audit does not establish a valid test of the original error-versus-shock mechanism. Three subagents reviewed public sources, target/availability mathematics, and an actual bounded sample's schema. An observable-target replay is a separate conditional engineering step; no real-data model was fitted. [Research decision and next discriminating experiment](docs/real-data-feasibility-decision.md).
 
 The complete five-cell observation-noise sensitivity reports retention gains of approximately 0%, 0.0217%, 0.1116%, 0.1342%, and 0.0784%. Every five-cell-adjusted upper bound is below 0.23%, far below the 5% target. Increasing observation noise does not justify growing the architecture for this frozen task. [Full sensitivity report, figure and independent audits](docs/noise-sensitivity-results.md).
@@ -52,6 +54,9 @@ To reproduce the frozen benchmark into a separate directory, run `python -m ripp
 - [Public-data source audit](docs/public-data-audit.md): official exchange/book candidates, correction semantics, timing and use constraints.
 - [Observable-target audit](docs/observable-target-audit.md): causal information sets, delayed labels, observable returns and information-versus-model comparisons.
 - [Data-engineering feasibility](docs/data-engineering-feasibility.md): bounded sample schema inspection, private-data handling and additional documented sources.
+- [Replay implementation and readiness](docs/replay-readiness-results.md): implemented prefix boundary, 69-test validation and the remaining evidence gate.
+- [Replay mathematical contract](docs/replay-contract.md): ordinal horizons, fixed-window labels, training cutoffs and censoring.
+- [Binance recorded-file audit](docs/binance-readiness-audit.md): preselected bounded inspection, provenance and source-specific attribution/license notice.
 
 To reproduce v2 into a separate directory, run `python -m ripplenet.history_experiment --stage final --output work/v2-reproduction`. This repeats disclosed seeds and does not supply a new independent test.
 
