@@ -1,5 +1,7 @@
 # Research frontier after the offline importer
 
+**Subsequent action:** after the recommended option and alternatives were presented, the owner instructed continuation. The recommendation is being pursued as a new conditional question under a [frozen information-diagnostic plan](information-diagnostic-plan.md). The original archive gate remains unmet. The decision below records the preceding frontier review.
+
 The engineering boundary is complete for the present retrieved archive. A further subagent review of the existing evidence found no remaining importer or readiness implementation that would answer the missing scientific question. No new market data, model runs or experimental results were generated in this review.
 
 ## What is established

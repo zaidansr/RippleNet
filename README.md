@@ -6,7 +6,7 @@ This repository tests a proposed distinction between observation corruption and 
 
 ## Current results
 
-The post-import review closes further readiness work on the current archive: code cannot create the missing original-availability and cause evidence. A new research direction is pending an explicit choice. [Evidence frontier and three research options](docs/research-frontier.md).
+The recommended next branch is a newly declared synthetic information-value diagnostic: compare an independent second measurement with same-input linear prediction, using duplicate/shared-disturbance controls. Its assumptions do not validate an available market signal. [Frozen plan](docs/information-diagnostic-plan.md). The current archive's original-availability and cause evidence gaps remain unmet; [frontier review](docs/research-frontier.md).
 
 The offline archive importer now preserves retrieved row order, explicit units, provenance and incomplete targets while refusing unsupported correction labels. It passed a local check on the already inspected sample; all 82 repository tests pass. This is engineering validation, with no real-data model fitted. [Importer and target-attachment results](docs/archive-import-results.md).
 
