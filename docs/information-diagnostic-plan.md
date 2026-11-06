@@ -22,7 +22,9 @@ Compare exact primary-only Bayes, exact full-information Bayes and full-informat
 
 ## Estimands and identities
 
-Report absolute expected squared forecast risk for every arm. Separately report information value, primary Bayes risk minus full Bayes risk, and nonlinear approximation headroom, full-information linear risk minus full Bayes risk. Also compute each gap directly as the expected squared difference between its two conditional-mean predictions. Report the two relative reductions with their own denominators: primary risk and full-information linear risk respectively. Classification information is not a forecasting benefit by itself.
+Report absolute expected squared forecast risk for every arm. Separately report information value, primary Bayes risk minus full Bayes risk, and nonlinear approximation headroom, full-information linear risk minus full Bayes risk. Also compute each gap directly as the expected squared difference between its two forecasts. Report the two relative reductions with their own denominators: primary risk and full-information linear risk respectively. Classification information is not a forecasting benefit by itself.
+
+Wording clarification before full execution: the linear predictor is not generally a conditional mean. Replacing "conditional-mean predictions" with "forecasts" corrects that description without changing an estimand, formula, parameter or numerical gate.
 
 Conditional forecast risk is Q+a^2 Var(X|observations). Exact posterior weights use Gaussian likelihoods, and within-category conditioning uses the correct cross-covariance with X. Never pass realised category, X or future w to ordinary predictors.
 
