@@ -1,0 +1,2 @@
+# Optional plotting dependency; model reproduction remains separately pinned.
+matplotlib==3.11.2
