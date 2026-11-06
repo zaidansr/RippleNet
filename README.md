@@ -6,6 +6,8 @@ This repository tests a proposed distinction between observation corruption and 
 
 ## Current results
 
+The complete five-cell observation-noise sensitivity reports retention gains of approximately 0%, 0.0217%, 0.1116%, 0.1342%, and 0.0784%. Every five-cell-adjusted upper bound is below 0.23%, far below the 5% target. Increasing observation noise does not justify growing the architecture for this frozen task. [Full sensitivity report, figure and independent audits](docs/noise-sensitivity-results.md).
+
 An exploratory conditional-risk reconstruction explains the v2 outcome: future innovations account for 95.763% of delayed Bayes risk, while exact retention improves conditional risk over projection by only 0.03564%. Even perfect current-state information would permit at most 4.27116% improvement over projection on these disclosed histories under the assumed model, below the 5% target. Original forecasts and stored scores were reproduced exactly. [Risk decomposition and independent reviews](docs/conditional-risk-results.md).
 
 The subagent-reviewed v2 diagnostic gives every method the true intervention time. Posterior type inference improves, but retaining the full mixture shows essentially no forecast gain over a Gaussian projected once and updated independently: -0.0013%, with an adjusted interval of [-0.1449%, +0.1642%], on 128 new paired seed blocks. It fails the 5% practical target. [V2 report and independent audits](docs/experiment-v2-results.md).
@@ -22,6 +24,7 @@ python -m ripplenet.diagnostic
 python -m ripplenet.report
 python -m ripplenet.history_report
 python -m ripplenet.risk_report
+python -m ripplenet.noise_sensitivity_report
 ```
 
 The diagnostic checks mathematical identities and causal timing. Its output is not a forecasting benchmark, a statistical significance test, or a mechanism ablation.
@@ -42,9 +45,12 @@ To reproduce the frozen benchmark into a separate directory, run `python -m ripp
 - [V2 mathematics](docs/experiment-v2-mathematics.md): exact updates, risk limitations, and the v1 covariance-interpretation correction.
 - [V2 results](docs/experiment-v2-results.md): 128-seed findings with independent statistical and engineering reviews.
 - [Exploratory conditional-risk analysis](docs/conditional-risk-results.md): noise floor, approximation excess, timing, and oracle headroom; this reuses disclosed histories and is not a fresh test.
+- [Observation-noise sensitivity](docs/noise-sensitivity-results.md): all five fixed cells, 128 new paired seed blocks, source checks, scientific figure, and independent audits.
 
 To reproduce v2 into a separate directory, run `python -m ripplenet.history_experiment --stage final --output work/v2-reproduction`. This repeats disclosed seeds and does not supply a new independent test.
 
 The exploratory moment reconstruction can be repeated with `python -m ripplenet.risk_reconstruction --output work/risk-reproduction`. It checks the actual frozen v2 source and original CSV metrics before reporting new conditional moments.
+
+Repeat the noise sensitivity with `python -m ripplenet.noise_sensitivity --output work/noise-reproduction`. Optional figure rendering uses Matplotlib (`requirements-plot.txt`): `python -m ripplenet.noise_sensitivity_report --plot`. Plotting only reads saved results and records its versions separately.
 
 The work is AI-assisted. All scientific claims require reproducible evidence and checked sources. Explicit owner approval is required before any spending.

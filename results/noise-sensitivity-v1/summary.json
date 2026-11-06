@@ -1,0 +1,1290 @@
+{
+  "status": "fixed_grid_r_only_sensitivity",
+  "seed_blocks": [
+    70000,
+    70001,
+    70002,
+    70003,
+    70004,
+    70005,
+    70006,
+    70007,
+    70008,
+    70009,
+    70010,
+    70011,
+    70012,
+    70013,
+    70014,
+    70015,
+    70016,
+    70017,
+    70018,
+    70019,
+    70020,
+    70021,
+    70022,
+    70023,
+    70024,
+    70025,
+    70026,
+    70027,
+    70028,
+    70029,
+    70030,
+    70031,
+    70032,
+    70033,
+    70034,
+    70035,
+    70036,
+    70037,
+    70038,
+    70039,
+    70040,
+    70041,
+    70042,
+    70043,
+    70044,
+    70045,
+    70046,
+    70047,
+    70048,
+    70049,
+    70050,
+    70051,
+    70052,
+    70053,
+    70054,
+    70055,
+    70056,
+    70057,
+    70058,
+    70059,
+    70060,
+    70061,
+    70062,
+    70063,
+    70064,
+    70065,
+    70066,
+    70067,
+    70068,
+    70069,
+    70070,
+    70071,
+    70072,
+    70073,
+    70074,
+    70075,
+    70076,
+    70077,
+    70078,
+    70079,
+    70080,
+    70081,
+    70082,
+    70083,
+    70084,
+    70085,
+    70086,
+    70087,
+    70088,
+    70089,
+    70090,
+    70091,
+    70092,
+    70093,
+    70094,
+    70095,
+    70096,
+    70097,
+    70098,
+    70099,
+    70100,
+    70101,
+    70102,
+    70103,
+    70104,
+    70105,
+    70106,
+    70107,
+    70108,
+    70109,
+    70110,
+    70111,
+    70112,
+    70113,
+    70114,
+    70115,
+    70116,
+    70117,
+    70118,
+    70119,
+    70120,
+    70121,
+    70122,
+    70123,
+    70124,
+    70125,
+    70126,
+    70127
+  ],
+  "ratios": [
+    0.0,
+    0.25,
+    1.0,
+    4.0,
+    16.0
+  ],
+  "event_scale": 0.5,
+  "primary_origins": "tau+1 through tau+4",
+  "saved_origins": "tau through tau+4",
+  "shared_privilege": "true intervention time; exactly one Gaussian intervention; known parameters",
+  "bootstrap_seed": 789012,
+  "bootstrap_replicates": 9999,
+  "primary_family_size": 5,
+  "interval_scope": "primary: pointwise95 and five-cell99; others: descriptive95; no cell selection",
+  "local_source_commit": "e901a3c99055b2b7f3de5915fefb762fe02f6220",
+  "source_tree_at_run": "ea5b46d35b004153384ef6044878528d8c6a6bb0",
+  "source_provenance_note": "The published source_tree_at_run is the content authority; the local commit may not be published because the GitHub connector can create a different commit with the identical source tree.",
+  "working_tree_status_before_output": "",
+  "source_sha256": {
+    "ripplenet/noise_sensitivity.py": "e62a96e5584fd24235958333462b7caccd0b28eaa92a419d0907be99eefa0e46",
+    "ripplenet/history.py": "13cfe750cb0054e8ead7426b0200bf8ae9c43305fb00efdcaa71a1ee757f87b8",
+    "ripplenet/history_risk.py": "00ee522507965fc01cb4c19640132603248859055e177bae4559423e0377c869",
+    "ripplenet/benchmark.py": "b4405fcf406ca00b7650e99c5e0a3ab147169ed049a37756f5c3223062005a91",
+    "ripplenet/simulation.py": "460faf01aa8a26e786c93859248fb5ad9e4154bb04bb857ff181b19681a4dd67"
+  },
+  "python": "3.13.3",
+  "numpy": "2.3.2",
+  "cells": [
+    {
+      "cell_id": "r00",
+      "ratio": 0.0,
+      "path": "r00.csv",
+      "per_origin_rows": 1280,
+      "measurement_cov": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "by_origin": {
+        "0": {
+          "future": 0.01,
+          "within_type": 0.0010416666666666667,
+          "type_information": 0.011721608216975973,
+          "bayes": 0.02276327488364264,
+          "projected_excess": 0.0,
+          "frozen_excess": 0.0,
+          "projected_total": 0.02276327488364264,
+          "frozen_total": 0.02276327488364264,
+          "category_oracle": 0.01104166666666667,
+          "retained_mse": 0.02247912928619602,
+          "projected_mse": 0.02247912928619602
+        },
+        "1": {
+          "future": 0.01,
+          "within_type": 5.583537110355503e-35,
+          "type_information": 1.0439634840699628e-35,
+          "bayes": 0.01,
+          "projected_excess": 3.5559102448838782e-34,
+          "frozen_excess": 2.4445604243870133e-34,
+          "projected_total": 0.01,
+          "frozen_total": 0.01,
+          "category_oracle": 0.01,
+          "retained_mse": 0.010845746733519863,
+          "projected_mse": 0.010845746733519863
+        },
+        "2": {
+          "future": 0.01,
+          "within_type": 6.207126339691107e-101,
+          "type_information": 1.7217294745146376e-37,
+          "bayes": 0.01,
+          "projected_excess": 5.576983332147186e-35,
+          "frozen_excess": 5.261855949447449e-35,
+          "projected_total": 0.01,
+          "frozen_total": 0.01,
+          "category_oracle": 0.01,
+          "retained_mse": 0.01015327504241615,
+          "projected_mse": 0.01015327504241615
+        },
+        "3": {
+          "future": 0.01,
+          "within_type": 9.57086282689438e-232,
+          "type_information": 6.175330980468208e-40,
+          "bayes": 0.01,
+          "projected_excess": 4.6095929568655504e-35,
+          "frozen_excess": 4.584522296893307e-35,
+          "projected_total": 0.01,
+          "frozen_total": 0.01,
+          "category_oracle": 0.01,
+          "retained_mse": 0.01016191988585072,
+          "projected_mse": 0.01016191988585072
+        },
+        "4": {
+          "future": 0.01,
+          "within_type": 0.0,
+          "type_information": 0.0,
+          "bayes": 0.01,
+          "projected_excess": 3.187719987253339e-35,
+          "frozen_excess": 3.187719987253339e-35,
+          "projected_total": 0.01,
+          "frozen_total": 0.01,
+          "category_oracle": 0.01,
+          "retained_mse": 0.010619424034300709,
+          "projected_mse": 0.01061942403430071
+        }
+      },
+      "delayed_origins_1_to_4": {
+        "future": {
+          "mean": 0.01,
+          "descriptive_ci95": [
+            0.01,
+            0.01
+          ]
+        },
+        "within_type": {
+          "mean": 1.3958842775888758e-35,
+          "descriptive_ci95": [
+            1.3218804712838886e-35,
+            1.4642997425831655e-35
+          ]
+        },
+        "type_information": {
+          "mean": 2.6531063303122845e-36,
+          "descriptive_ci95": [
+            2.049605071228026e-36,
+            3.3216912617333374e-36
+          ]
+        },
+        "bayes": {
+          "mean": 0.01,
+          "descriptive_ci95": [
+            0.01,
+            0.01
+          ]
+        },
+        "projected_excess": {
+          "mean": 1.2233349681276214e-34,
+          "descriptive_ci95": [
+            1.030912481324382e-34,
+            1.4384782270465853e-34
+          ]
+        },
+        "frozen_excess": {
+          "mean": 9.369925619366056e-35,
+          "descriptive_ci95": [
+            7.752904200322057e-35,
+            1.1201893528194431e-34
+          ]
+        },
+        "projected_total": {
+          "mean": 0.01,
+          "descriptive_ci95": [
+            0.01,
+            0.01
+          ]
+        },
+        "frozen_total": {
+          "mean": 0.01,
+          "descriptive_ci95": [
+            0.01,
+            0.01
+          ]
+        },
+        "category_oracle": {
+          "mean": 0.01,
+          "descriptive_ci95": [
+            0.01,
+            0.01
+          ]
+        },
+        "retained_mse": {
+          "mean": 0.01044509142402186,
+          "descriptive_ci95": [
+            0.00961100113576595,
+            0.011300089354834907
+          ]
+        },
+        "projected_mse": {
+          "mean": 0.01044509142402186,
+          "descriptive_ci95": [
+            0.00961100113576595,
+            0.011300089354834907
+          ]
+        },
+        "projection_improvement_fraction": {
+          "ratio_of_means": 1.2233349681276214e-32,
+          "descriptive_ci95": [
+            1.0309124813243819e-32,
+            1.4384782270465853e-32
+          ],
+          "ci95": [
+            1.0309124813243819e-32,
+            1.4384782270465853e-32
+          ],
+          "adjusted_ci99": [
+            9.788552718037262e-33,
+            1.509789261016195e-32
+          ],
+          "adjustment_family_size": 5
+        },
+        "category_information_fraction": {
+          "ratio_of_means": 2.6531063303122843e-34,
+          "descriptive_ci95": [
+            2.049605071228026e-34,
+            3.321691261733337e-34
+          ]
+        },
+        "future_noise_fraction": {
+          "ratio_of_means": 1.0,
+          "descriptive_ci95": [
+            1.0,
+            1.0
+          ]
+        },
+        "perfect_current_state_ceiling_fraction": {
+          "ratio_of_means": 0.0,
+          "descriptive_ci95": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "checks": {
+        "max_matched_prefix_gap": 0.0,
+        "max_origin_zero_arm_gap": 0.0,
+        "max_origin_zero_probability_gap": 0.0,
+        "max_risk_identity_error": 1.3877787807814457e-17,
+        "max_standardized_noise_gap": 0.0,
+        "latent_and_event_coupling_exact": true,
+        "max_zero_r_forecast_gap": 1.249000902703301e-16,
+        "max_zero_r_floor_error": 0.0,
+        "max_zero_r_state_risk": 5.3133598517808275e-33
+      }
+    },
+    {
+      "cell_id": "r01",
+      "ratio": 0.25,
+      "path": "r01.csv",
+      "per_origin_rows": 1280,
+      "measurement_cov": [
+        [
+          0.0025,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0025,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0025
+        ]
+      ],
+      "by_origin": {
+        "0": {
+          "future": 0.01,
+          "within_type": 0.0013619979355537863,
+          "type_information": 0.011612873584353024,
+          "bayes": 0.022974871519906806,
+          "projected_excess": 0.0,
+          "frozen_excess": 0.0,
+          "projected_total": 0.022974871519906806,
+          "frozen_total": 0.022974871519906806,
+          "category_oracle": 0.011361997935553786,
+          "retained_mse": 0.022798539010772126,
+          "projected_mse": 0.022798539010772126
+        },
+        "1": {
+          "future": 0.01,
+          "within_type": 0.0004449047840425341,
+          "type_information": 1.052563612048418e-05,
+          "bayes": 0.010455430420163019,
+          "projected_excess": 8.978237804113082e-06,
+          "frozen_excess": 8.033672489641309e-05,
+          "projected_total": 0.01046440865796713,
+          "frozen_total": 0.010535767145059433,
+          "category_oracle": 0.010444904784042535,
+          "retained_mse": 0.011606983898936468,
+          "projected_mse": 0.011635793499459372
+        },
+        "2": {
+          "future": 0.01,
+          "within_type": 0.00043768734559404104,
+          "type_information": 9.489850162570684e-08,
+          "bayes": 0.010437782244095667,
+          "projected_excess": 8.617620451872884e-08,
+          "frozen_excess": 8.069927564051514e-07,
+          "projected_total": 0.010437868420300186,
+          "frozen_total": 0.01043858923685207,
+          "category_oracle": 0.01043768734559404,
+          "retained_mse": 0.010739959630475842,
+          "projected_mse": 0.010737324605891135
+        },
+        "3": {
+          "future": 0.01,
+          "within_type": 0.000437613887697601,
+          "type_information": 9.707292614873915e-10,
+          "bayes": 0.010437614858426862,
+          "projected_excess": 9.037198845646504e-10,
+          "frozen_excess": 8.601881136429107e-09,
+          "projected_total": 0.01043761576214675,
+          "frozen_total": 0.010437623460307998,
+          "category_oracle": 0.010437613887697601,
+          "retained_mse": 0.010196587151061278,
+          "projected_mse": 0.010196819065104992
+        },
+        "4": {
+          "future": 0.01,
+          "within_type": 0.00043761309010767414,
+          "type_information": 1.0557263061593313e-11,
+          "bayes": 0.010437613100664937,
+          "projected_excess": 9.928791914759214e-12,
+          "frozen_excess": 9.528637440563614e-11,
+          "projected_total": 0.01043761311059373,
+          "frozen_total": 0.010437613195951313,
+          "category_oracle": 0.010437613090107677,
+          "retained_mse": 0.011220475666828022,
+          "projected_mse": 0.011220500339396214
+        }
+      },
+      "delayed_origins_1_to_4": {
+        "future": {
+          "mean": 0.01,
+          "descriptive_ci95": [
+            0.01,
+            0.01
+          ]
+        },
+        "within_type": {
+          "mean": 0.0004394547768604626,
+          "descriptive_ci95": [
+            0.00043936120860025646,
+            0.000439545731087354
+          ]
+        },
+        "type_information": {
+          "mean": 2.655378977158609e-06,
+          "descriptive_ci95": [
+            2.2403374029293954e-06,
+            3.0857869623722673e-06
+          ]
+        },
+        "bayes": {
+          "mean": 0.010442110155837622,
+          "descriptive_ci95": [
+            0.010441675815174184,
+            0.010442557711394955
+          ]
+        },
+        "projected_excess": {
+          "mean": 2.2663319143270726e-06,
+          "descriptive_ci95": [
+            1.8116016018071965e-06,
+            2.780695833086809e-06
+          ]
+        },
+        "frozen_excess": {
+          "mean": 2.0288103705082268e-05,
+          "descriptive_ci95": [
+            1.6497237957787086e-05,
+            2.4467559119246715e-05
+          ]
+        },
+        "projected_total": {
+          "mean": 0.010444376487751948,
+          "descriptive_ci95": [
+            0.01044382320685359,
+            0.010444975441427664
+          ]
+        },
+        "frozen_total": {
+          "mean": 0.010462398259542705,
+          "descriptive_ci95": [
+            0.010458799861717466,
+            0.010466443531082682
+          ]
+        },
+        "category_oracle": {
+          "mean": 0.010439454776860464,
+          "descriptive_ci95": [
+            0.010439361208600256,
+            0.010439545731087355
+          ]
+        },
+        "retained_mse": {
+          "mean": 0.010941001586825403,
+          "descriptive_ci95": [
+            0.010086693913651723,
+            0.011829666883272222
+          ]
+        },
+        "projected_mse": {
+          "mean": 0.01094760937746293,
+          "descriptive_ci95": [
+            0.010093149672843279,
+            0.011835750042169815
+          ]
+        },
+        "projection_improvement_fraction": {
+          "ratio_of_means": 0.00021699063768763842,
+          "descriptive_ci95": [
+            0.00017346061849440216,
+            0.00026623286641372823
+          ],
+          "ci95": [
+            0.00017346061849440216,
+            0.00026623286641372823
+          ],
+          "adjusted_ci99": [
+            0.00016045416989069456,
+            0.00028344686932
+          ],
+          "adjustment_family_size": 5
+        },
+        "category_information_fraction": {
+          "ratio_of_means": 0.0002542952466053166,
+          "descriptive_ci95": [
+            0.00021455577484744162,
+            0.0002955021157809302
+          ]
+        },
+        "future_noise_fraction": {
+          "ratio_of_means": 0.9576608416077222,
+          "descriptive_ci95": [
+            0.9576197974072929,
+            0.9577006772675011
+          ]
+        },
+        "perfect_current_state_ceiling_fraction": {
+          "ratio_of_means": 0.04254696182898665,
+          "descriptive_ci95": [
+            0.04249623897906822,
+            0.042601865741375256
+          ]
+        }
+      },
+      "checks": {
+        "max_matched_prefix_gap": 1.1102230246251565e-16,
+        "max_origin_zero_arm_gap": 0.0,
+        "max_origin_zero_probability_gap": 0.0,
+        "max_risk_identity_error": 6.938893903907228e-18,
+        "max_standardized_noise_gap": 0.0,
+        "latent_and_event_coupling_exact": true,
+        "max_zero_r_forecast_gap": 0.0,
+        "max_zero_r_floor_error": 0.0,
+        "max_zero_r_state_risk": 0.0
+      }
+    },
+    {
+      "cell_id": "r02",
+      "ratio": 1.0,
+      "path": "r02.csv",
+      "per_origin_rows": 1280,
+      "measurement_cov": [
+        [
+          0.01,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.01,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.01
+        ]
+      ],
+      "by_origin": {
+        "0": {
+          "future": 0.01,
+          "within_type": 0.002223271722856013,
+          "type_information": 0.011306811201897412,
+          "bayes": 0.023530082924753427,
+          "projected_excess": 0.0,
+          "frozen_excess": 0.0,
+          "projected_total": 0.023530082924753427,
+          "frozen_total": 0.023530082924753427,
+          "category_oracle": 0.012223271722856012,
+          "retained_mse": 0.02343161544337191,
+          "projected_mse": 0.02343161544337191
+        },
+        "1": {
+          "future": 0.01,
+          "within_type": 0.0012077481427705452,
+          "type_information": 0.0001201097726713957,
+          "bayes": 0.011327857915441941,
+          "projected_excess": 4.72305572961292e-05,
+          "frozen_excess": 0.00041744926504003725,
+          "projected_total": 0.011375088472738071,
+          "frozen_total": 0.011745307180481978,
+          "category_oracle": 0.011207748142770545,
+          "retained_mse": 0.012683027985597674,
+          "projected_mse": 0.012796432025597257
+        },
+        "2": {
+          "future": 0.01,
+          "within_type": 0.0011554720565670649,
+          "type_information": 6.280632185015773e-06,
+          "bayes": 0.01116175268875208,
+          "projected_excess": 2.640888529773452e-06,
+          "frozen_excess": 2.4768106413900933e-05,
+          "projected_total": 0.011164393577281856,
+          "frozen_total": 0.011186520795165982,
+          "category_oracle": 0.011155472056567065,
+          "retained_mse": 0.011611439021283296,
+          "projected_mse": 0.011605373821534412
+        },
+        "3": {
+          "future": 0.01,
+          "within_type": 0.0011523488129036989,
+          "type_information": 3.8262305022295127e-07,
+          "bayes": 0.011152731435953921,
+          "projected_excess": 1.6316181049461852e-07,
+          "frozen_excess": 1.5361965594375496e-06,
+          "projected_total": 0.011152894597764414,
+          "frozen_total": 0.01115426763251336,
+          "category_oracle": 0.011152348812903699,
+          "retained_mse": 0.010717517283873039,
+          "projected_mse": 0.010719867684183794
+        },
+        "4": {
+          "future": 0.01,
+          "within_type": 0.001152150689743054,
+          "type_information": 2.445155144692575e-08,
+          "bayes": 0.0111521751412945,
+          "projected_excess": 1.0464938136580666e-08,
+          "frozen_excess": 9.894948265573267e-08,
+          "projected_total": 0.011152185606232635,
+          "frozen_total": 0.011152274090777157,
+          "category_oracle": 0.011152150689743054,
+          "retained_mse": 0.01178036379599352,
+          "projected_mse": 0.011780907250593428
+        }
+      },
+      "delayed_origins_1_to_4": {
+        "future": {
+          "mean": 0.01,
+          "descriptive_ci95": [
+            0.01,
+            0.01
+          ]
+        },
+        "within_type": {
+          "mean": 0.001166929925496091,
+          "descriptive_ci95": [
+            0.001166799740781362,
+            0.0011670578697689912
+          ]
+        },
+        "type_information": {
+          "mean": 3.169936986452034e-05,
+          "descriptive_ci95": [
+            2.789836762443573e-05,
+            3.576577713045036e-05
+          ]
+        },
+        "bayes": {
+          "mean": 0.01119862929536061,
+          "descriptive_ci95": [
+            0.01119479337411106,
+            0.011202710719424526
+          ]
+        },
+        "projected_excess": {
+          "mean": 1.2511268143633466e-05,
+          "descriptive_ci95": [
+            9.409512913803689e-06,
+            1.5972055830523102e-05
+          ]
+        },
+        "frozen_excess": {
+          "mean": 0.00011096312937400786,
+          "descriptive_ci95": [
+            8.784093198787862e-05,
+            0.0001367901251613521
+          ]
+        },
+        "projected_total": {
+          "mean": 0.011211140563504245,
+          "descriptive_ci95": [
+            0.011206501523289678,
+            0.01121606308987781
+          ]
+        },
+        "frozen_total": {
+          "mean": 0.01130959242473462,
+          "descriptive_ci95": [
+            0.0112872146871948,
+            0.011334948886771667
+          ]
+        },
+        "category_oracle": {
+          "mean": 0.01116692992549609,
+          "descriptive_ci95": [
+            0.011166799740781361,
+            0.01116705786976899
+          ]
+        },
+        "retained_mse": {
+          "mean": 0.011698087021686883,
+          "descriptive_ci95": [
+            0.010762017934370524,
+            0.012680399919076601
+          ]
+        },
+        "projected_mse": {
+          "mean": 0.011725645195477225,
+          "descriptive_ci95": [
+            0.010791519920846818,
+            0.012708549704498872
+          ]
+        },
+        "projection_improvement_fraction": {
+          "ratio_of_means": 0.001115967467606422,
+          "descriptive_ci95": [
+            0.0008394508674852502,
+            0.0014243747270827826
+          ],
+          "ci95": [
+            0.0008394508674852502,
+            0.0014243747270827826
+          ],
+          "adjusted_ci99": [
+            0.0007558756250692484,
+            0.0015282844738260014
+          ],
+          "adjustment_family_size": 5
+        },
+        "category_information_fraction": {
+          "ratio_of_means": 0.0028306473076712,
+          "descriptive_ci95": [
+            0.002492065549053008,
+            0.003192608057564335
+          ]
+        },
+        "future_noise_fraction": {
+          "ratio_of_means": 0.8929664279665743,
+          "descriptive_ci95": [
+            0.8926410982532,
+            0.8932724049311986
+          ]
+        },
+        "perfect_current_state_ceiling_fraction": {
+          "ratio_of_means": 0.10803009351670112,
+          "descriptive_ci95": [
+            0.10766085390541028,
+            0.1084215629077902
+          ]
+        }
+      },
+      "checks": {
+        "max_matched_prefix_gap": 1.1102230246251565e-16,
+        "max_origin_zero_arm_gap": 0.0,
+        "max_origin_zero_probability_gap": 0.0,
+        "max_risk_identity_error": 1.3877787807814457e-17,
+        "max_standardized_noise_gap": 1.3322676295501878e-15,
+        "latent_and_event_coupling_exact": true,
+        "max_zero_r_forecast_gap": 0.0,
+        "max_zero_r_floor_error": 0.0,
+        "max_zero_r_state_risk": 0.0
+      }
+    },
+    {
+      "cell_id": "r03",
+      "ratio": 4.0,
+      "path": "r03.csv",
+      "per_origin_rows": 1280,
+      "measurement_cov": [
+        [
+          0.04,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.04,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.04
+        ]
+      ],
+      "by_origin": {
+        "0": {
+          "future": 0.01,
+          "within_type": 0.005055686353028162,
+          "type_information": 0.010229046217640266,
+          "bayes": 0.025284732570668426,
+          "projected_excess": 0.0,
+          "frozen_excess": 0.0,
+          "projected_total": 0.025284732570668426,
+          "frozen_total": 0.025284732570668426,
+          "category_oracle": 0.015055686353028168,
+          "retained_mse": 0.02532077855433469,
+          "projected_mse": 0.02532077855433469
+        },
+        "1": {
+          "future": 0.01,
+          "within_type": 0.002453024108831357,
+          "type_information": 0.0006812205183324076,
+          "bayes": 0.013134244627163765,
+          "projected_excess": 5.734983976089542e-05,
+          "frozen_excess": 0.0006088165213260737,
+          "projected_total": 0.01319159446692466,
+          "frozen_total": 0.01374306114848984,
+          "category_oracle": 0.012453024108831357,
+          "retained_mse": 0.014736157708218086,
+          "projected_mse": 0.014891705426869954
+        },
+        "2": {
+          "future": 0.01,
+          "within_type": 0.002119597878732543,
+          "type_information": 9.721415572729348e-05,
+          "bayes": 0.012216812034459837,
+          "projected_excess": 7.775272576199868e-06,
+          "frozen_excess": 9.816591998475402e-05,
+          "projected_total": 0.012224587307036036,
+          "frozen_total": 0.01231497795444459,
+          "category_oracle": 0.012119597878732543,
+          "retained_mse": 0.012940130284892345,
+          "projected_mse": 0.012961373547412697
+        },
+        "3": {
+          "future": 0.01,
+          "within_type": 0.0020684907696970293,
+          "type_information": 1.595437696544174e-05,
+          "bayes": 0.012084445146662471,
+          "projected_excess": 1.199958507664838e-06,
+          "frozen_excess": 1.6165050970212777e-05,
+          "projected_total": 0.012085645105170136,
+          "frozen_total": 0.012100610197632686,
+          "category_oracle": 0.01206849076969703,
+          "retained_mse": 0.0115971958757424,
+          "projected_mse": 0.011605698800089246
+        },
+        "4": {
+          "future": 0.01,
+          "within_type": 0.0020598933953883854,
+          "type_information": 2.7429606705474303e-06,
+          "bayes": 0.012062636356058934,
+          "projected_excess": 2.084633269641063e-07,
+          "frozen_excess": 2.776808614168525e-06,
+          "projected_total": 0.012062844819385896,
+          "frozen_total": 0.012065413164673102,
+          "category_oracle": 0.012059893395388386,
+          "retained_mse": 0.012293701853844517,
+          "projected_mse": 0.012292260284905855
+        }
+      },
+      "delayed_origins_1_to_4": {
+        "future": {
+          "mean": 0.01,
+          "descriptive_ci95": [
+            0.01,
+            0.01
+          ]
+        },
+        "within_type": {
+          "mean": 0.0021752515381623285,
+          "descriptive_ci95": [
+            0.00216886690740589,
+            0.002181744678847841
+          ]
+        },
+        "type_information": {
+          "mean": 0.00019928300292392257,
+          "descriptive_ci95": [
+            0.00017788454240825943,
+            0.0002226035525287964
+          ]
+        },
+        "bayes": {
+          "mean": 0.012374534541086252,
+          "descriptive_ci95": [
+            0.012351983124168856,
+            0.01239843019790294
+          ]
+        },
+        "projected_excess": {
+          "mean": 1.663338354293106e-05,
+          "descriptive_ci95": [
+            1.0375330696592277e-05,
+            2.5023225779621545e-05
+          ]
+        },
+        "frozen_excess": {
+          "mean": 0.00018148107522380225,
+          "descriptive_ci95": [
+            0.00013509096989506672,
+            0.00023831971254965764
+          ]
+        },
+        "projected_total": {
+          "mean": 0.012391167924629184,
+          "descriptive_ci95": [
+            0.012366180638056678,
+            0.012417174478873581
+          ]
+        },
+        "frozen_total": {
+          "mean": 0.012556015616310052,
+          "descriptive_ci95": [
+            0.012495153840199225,
+            0.012624514391581064
+          ]
+        },
+        "category_oracle": {
+          "mean": 0.012175251538162329,
+          "descriptive_ci95": [
+            0.01216886690740589,
+            0.012181744678847842
+          ]
+        },
+        "retained_mse": {
+          "mean": 0.012891796430674337,
+          "descriptive_ci95": [
+            0.01179822803340289,
+            0.014045014606377281
+          ]
+        },
+        "projected_mse": {
+          "mean": 0.012937759514819437,
+          "descriptive_ci95": [
+            0.011849471775419826,
+            0.014088614558755447
+          ]
+        },
+        "projection_improvement_fraction": {
+          "ratio_of_means": 0.0013423580121023036,
+          "descriptive_ci95": [
+            0.0008382610877503702,
+            0.0020176325349888736
+          ],
+          "ci95": [
+            0.0008382610877503702,
+            0.0020176325349888736
+          ],
+          "adjusted_ci99": [
+            0.0007297487477219041,
+            0.0022735980641944977
+          ],
+          "adjustment_family_size": 5
+        },
+        "category_information_fraction": {
+          "ratio_of_means": 0.016104282731787444,
+          "descriptive_ci95": [
+            0.014399108886672327,
+            0.017948938896356514
+          ]
+        },
+        "future_noise_fraction": {
+          "ratio_of_means": 0.8081112034394295,
+          "descriptive_ci95": [
+            0.806553720138827,
+            0.8095865983198623
+          ]
+        },
+        "perfect_current_state_ceiling_fraction": {
+          "ratio_of_means": 0.192973571109177,
+          "descriptive_ci95": [
+            0.1913428816310637,
+            0.19466380882256196
+          ]
+        }
+      },
+      "checks": {
+        "max_matched_prefix_gap": 5.551115123125783e-17,
+        "max_origin_zero_arm_gap": 0.0,
+        "max_origin_zero_probability_gap": 0.0,
+        "max_risk_identity_error": 1.3877787807814457e-17,
+        "max_standardized_noise_gap": 1.3322676295501878e-15,
+        "latent_and_event_coupling_exact": true,
+        "max_zero_r_forecast_gap": 0.0,
+        "max_zero_r_floor_error": 0.0,
+        "max_zero_r_state_risk": 0.0
+      }
+    },
+    {
+      "cell_id": "r04",
+      "ratio": 16.0,
+      "path": "r04.csv",
+      "per_origin_rows": 1280,
+      "measurement_cov": [
+        [
+          0.16,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.16,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.16
+        ]
+      ],
+      "by_origin": {
+        "0": {
+          "future": 0.01,
+          "within_type": 0.012166450090626177,
+          "type_information": 0.0075119720386934135,
+          "bayes": 0.029678422129319596,
+          "projected_excess": 0.0,
+          "frozen_excess": 0.0,
+          "projected_total": 0.029678422129319596,
+          "frozen_total": 0.029678422129319596,
+          "category_oracle": 0.02216645009062618,
+          "retained_mse": 0.02971393490348107,
+          "projected_mse": 0.02971393490348107
+        },
+        "1": {
+          "future": 0.01,
+          "within_type": 0.004434503013413978,
+          "type_information": 0.0011785518943470835,
+          "bayes": 0.015613054907761062,
+          "projected_excess": 2.9564413672899196e-05,
+          "frozen_excess": 0.00028840776265597415,
+          "projected_total": 0.01564261932143396,
+          "frozen_total": 0.015901462670417036,
+          "category_oracle": 0.014434503013413976,
+          "retained_mse": 0.017429327777007713,
+          "projected_mse": 0.017501770978893175
+        },
+        "2": {
+          "future": 0.01,
+          "within_type": 0.0030505081867871066,
+          "type_information": 0.0002607973799453577,
+          "bayes": 0.013311305566732465,
+          "projected_excess": 9.65832438074845e-06,
+          "frozen_excess": 7.010272040839257e-05,
+          "projected_total": 0.013320963891113213,
+          "frozen_total": 0.013381408287140857,
+          "category_oracle": 0.013050508186787107,
+          "retained_mse": 0.014339670376412456,
+          "projected_mse": 0.014385259630460844
+        },
+        "3": {
+          "future": 0.01,
+          "within_type": 0.002745152908668104,
+          "type_information": 6.399389260606196e-05,
+          "bayes": 0.012809146801274167,
+          "projected_excess": 2.709574066869594e-06,
+          "frozen_excess": 1.782433603824548e-05,
+          "projected_total": 0.012811856375341036,
+          "frozen_total": 0.012826971137312411,
+          "category_oracle": 0.012745152908668105,
+          "retained_mse": 0.012348651878794813,
+          "projected_mse": 0.01236620912900036
+        },
+        "4": {
+          "future": 0.01,
+          "within_type": 0.002669445870682758,
+          "type_information": 1.6556358740221067e-05,
+          "bayes": 0.012686002229422979,
+          "projected_excess": 7.423490109281718e-07,
+          "frozen_excess": 4.668214442296858e-06,
+          "projected_total": 0.012686744578433908,
+          "frozen_total": 0.012690670443865276,
+          "category_oracle": 0.012669445870682758,
+          "retained_mse": 0.012581716034739253,
+          "projected_mse": 0.012572706257172009
+        }
+      },
+      "delayed_origins_1_to_4": {
+        "future": {
+          "mean": 0.01,
+          "descriptive_ci95": [
+            0.01,
+            0.01
+          ]
+        },
+        "within_type": {
+          "mean": 0.0032249024948879865,
+          "descriptive_ci95": [
+            0.0031956959083115654,
+            0.003254793690594929
+          ]
+        },
+        "type_information": {
+          "mean": 0.00037997488140968107,
+          "descriptive_ci95": [
+            0.0003309279618538589,
+            0.00043157333189107277
+          ]
+        },
+        "bayes": {
+          "mean": 0.013604877376297668,
+          "descriptive_ci95": [
+            0.013541957278422253,
+            0.013670259434794154
+          ]
+        },
+        "projected_excess": {
+          "mean": 1.0668665282861353e-05,
+          "descriptive_ci95": [
+            6.2969396637764855e-06,
+            1.615441782514948e-05
+          ]
+        },
+        "frozen_excess": {
+          "mean": 9.525075838622726e-05,
+          "descriptive_ci95": [
+            5.938507859348594e-05,
+            0.0001362305992611658
+          ]
+        },
+        "projected_total": {
+          "mean": 0.01361554604158053,
+          "descriptive_ci95": [
+            0.013552885622018198,
+            0.01368094570578824
+          ]
+        },
+        "frozen_total": {
+          "mean": 0.013700128134683895,
+          "descriptive_ci95": [
+            0.013617365079003841,
+            0.01379197525432774
+          ]
+        },
+        "category_oracle": {
+          "mean": 0.013224902494887987,
+          "descriptive_ci95": [
+            0.013195695908311565,
+            0.013254793690594928
+          ]
+        },
+        "retained_mse": {
+          "mean": 0.014174841516738559,
+          "descriptive_ci95": [
+            0.012923029872111974,
+            0.015473723741098724
+          ]
+        },
+        "projected_mse": {
+          "mean": 0.014206486498881597,
+          "descriptive_ci95": [
+            0.0129589436546486,
+            0.015505033640828753
+          ]
+        },
+        "projection_improvement_fraction": {
+          "ratio_of_means": 0.0007835649962388806,
+          "descriptive_ci95": [
+            0.000462263182391162,
+            0.0011870848232568786
+          ],
+          "ci95": [
+            0.000462263182391162,
+            0.0011870848232568786
+          ],
+          "adjusted_ci99": [
+            0.00040774736494470566,
+            0.0013479396922058409
+          ],
+          "adjustment_family_size": 5
+        },
+        "category_information_fraction": {
+          "ratio_of_means": 0.027929313208781354,
+          "descriptive_ci95": [
+            0.024429382712487263,
+            0.03158053219974603
+          ]
+        },
+        "future_noise_fraction": {
+          "ratio_of_means": 0.7350305132056492,
+          "descriptive_ci95": [
+            0.7315150124033173,
+            0.7384456910037134
+          ]
+        },
+        "perfect_current_state_ceiling_fraction": {
+          "ratio_of_means": 0.2655454309756663,
+          "descriptive_ci95": [
+            0.2621497532756708,
+            0.26905637846864866
+          ]
+        }
+      },
+      "checks": {
+        "max_matched_prefix_gap": 5.551115123125783e-17,
+        "max_origin_zero_arm_gap": 0.0,
+        "max_origin_zero_probability_gap": 0.0,
+        "max_risk_identity_error": 6.938893903907228e-18,
+        "max_standardized_noise_gap": 1.3322676295501878e-15,
+        "latent_and_event_coupling_exact": true,
+        "max_zero_r_forecast_gap": 0.0,
+        "max_zero_r_floor_error": 0.0,
+        "max_zero_r_state_risk": 0.0
+      }
+    }
+  ],
+  "fixed_settings": {
+    "transition": [
+      [
+        0.55,
+        0.1,
+        0.0
+      ],
+      [
+        0.0,
+        0.45,
+        0.1
+      ],
+      [
+        0.05,
+        0.0,
+        0.35
+      ]
+    ],
+    "process_cov": [
+      [
+        0.01,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.01,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.01
+      ]
+    ],
+    "n_steps": 180,
+    "burn_in": 128,
+    "type_prior": [
+      0.5,
+      0.5
+    ]
+  }
+}

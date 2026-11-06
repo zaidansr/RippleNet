@@ -1,5 +1,7 @@
 # Component choice and implementation assumptions
 
+**Noise-sensitivity update:** `noise_sensitivity.py` varies only ordinary measurement covariance across five declared cells, using 128 fresh paired seed blocks and coupling checks. Five fixture tests bring the suite to 58. `noise_sensitivity_report.py` renders all cells and an optional Matplotlib scientific figure from saved results; plotting is isolated from the pinned model runtime. See the [complete report](noise-sensitivity-results.md).
+
 **Conditional-risk update:** added posterior risk traces and `history_risk.py`; the existing forecast/log-weight calculations are unchanged. `risk_reconstruction.py` compares every path with the actual frozen v2 function and reproduces all frozen CSV metrics before exposing missing moments. `risk_report.py` labels the analysis exploratory. Eight new tests bring the suite to 53. See [risk findings and independent audits](conditional-risk-results.md).
 
 **V2 update:** the subagent-built `history.py` retains an exact two-component posterior under shared known timing; `history_statistics.py` implements five-contrast paired inference. Root integration is in `history_experiment.py`, with reporting in `history_report.py`. New invariant tests bring the suite to 45. See [v2 results](experiment-v2-results.md) and its independent audits. V1 data and numerical findings remain unchanged.

@@ -1,0 +1,7 @@
+{
+  "matplotlib": "3.11.2",
+  "plotting_numpy": "2.5.4",
+  "model_numpy": "2.3.2",
+  "input_summary_sha256_canonical_text": "863b9c6002f8a4789abdbe0278a6f8d15b72337b3115cf46defab0addf65bca2",
+  "simulator_rerun": false
+}
