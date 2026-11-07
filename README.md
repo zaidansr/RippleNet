@@ -6,6 +6,8 @@ This repository tests a proposed distinction between observation corruption and 
 
 ## Current results
 
+The completed pilot is synthesized in a [research-paper PDF](paper/RippleNet_research_report.pdf), with an [editable manuscript](docs/research-paper.md) and [standalone conclusion](docs/conclusion.md). It reports all synthetic and recorded-market stages, uncertainty, ablations, coverage and limitations. The evidence does not validate a financial RippleNet architecture, real error-versus-shock identification, or profitability. The manuscript is an AI-assisted research draft, not peer reviewed.
+
 The multi-session Kraken quote comparison finds no aggregate trade-MSE benefit beyond a fixed starting-gap correction: the fitted model is 0.061% worse. Midpoint MSE improves 0.761% versus its selected constant, with worse MAE. Only three monthly test sessions and 17.73% grid scoring coverage support descriptive conclusions. [Results, mechanical baseline and audit](docs/quote-study-results.md). Fitted parameters remain private under source terms.
 
 The free paired Kraken trade/quote sample passed a bounded audit: 73,704 trades, 862,680 BBO records, matching integrity checks and independently reproduced backward alignment. It supports designing a collector-clock comparison, with missing trade IDs, clock ties and single-session limits explicit. No quote-based model has been fitted. [Readiness findings and audit](docs/quote-readiness-results.md).

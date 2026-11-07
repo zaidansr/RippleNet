@@ -1,0 +1,13 @@
+# Conclusion of the RippleNet pilot
+
+The completed experiments do not validate RippleNet as a financial forecasting architecture or demonstrate identification of observation errors versus genuine market shocks. They establish scoped negative and mixed results that clarify what a stronger experiment must show.
+
+In the controlled synthetic studies, improving event-category inference did not produce a practically useful next-return advantage over strong same-information Gaussian controls. The original candidate failed its improvement gate and deteriorated under price-derived corruption. Exact retention added essentially no realised forecasting value over independent Gaussian projection in V2; conditional-risk reconstruction and the complete measurement-noise grid explained why the available headroom was small. These conclusions apply to the tested generator, privileges and delayed target, not all disturbance-aware forecasting models.
+
+A hypothetical clean auxiliary measurement created substantial information value, but a full-input linear predictor captured 99.16% of that benefit. This shows the importance of specifying the information set; it does not establish that a comparable sensor exists in financial markets or justify a specialised architecture.
+
+The real recorded-market studies show why target construction and baseline strength matter. Early-period trade-return MSE gains weakened when the target started one trade later and came with worse MAE. In the paired Kraken quote pilot, a fixed starting-gap correction matched or slightly exceeded the flexible model's aggregate trade MSE. The remaining midpoint MSE improvement was only 0.761%, with worse MAE, mixed session results, three test sessions and 17.73% grid scoring coverage. No statistical reliability, practical utility, efficient-price prediction or profitability claim follows.
+
+The next justified step is not automatic architecture growth. Further research needs a concrete intended use, an independently motivated falsifiable hypothesis, an appropriate observable target or independently defensible cause evidence, strong same-information baselines, explicit coverage and a genuinely protected evaluation. The current pilot should be preserved as a reproducible benchmark and critical research record. Its main contribution is methodological clarification rather than a validated new financial model.
+
+See the [complete research manuscript](research-paper.md) for methods, all study findings, uncertainty, limitations, references and source-specific publication conditions. This conclusion synthesizes existing findings; it introduces no new experiment or inference.

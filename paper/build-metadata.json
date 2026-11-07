@@ -1,0 +1,13 @@
+{
+  "source": "docs/research-paper.md",
+  "source_sha256": "0f932728d657f24285ee728f8e82e445bda4ee5f0bed0339897662c298dbd0d1",
+  "pdf": "paper/RippleNet_research_report.pdf",
+  "pdf_sha256": "f160555b4d3b11ab9501c9b4cfb5c15f9c8bb1a3d65d8aefb6db56ba4ea223b7",
+  "pages": 10,
+  "source_word_count": 5197,
+  "reportlab": "4.4.9",
+  "python": "3.12.14",
+  "format": "A4 single-column research manuscript; embedded serif fonts",
+  "contains_new_experiment": false,
+  "restricted_models_or_records_included": false
+}
