@@ -1,5 +1,7 @@
 # Component choice and implementation assumptions
 
+**Collector-clock quote pilot:** `quote_study.py` enforces streamed byte/row limits, strict backward joins, own-time freshness and shared historical inputs. It separates issued origins from paired scoring coverage and keeps all fitted artifacts outside the repository. Ten fixtures bring the suite to 118. See [mechanical-control findings](quote-study-results.md); only source-permitted aggregate reports and original general code are public.
+
 **Paired-target real-market control:** `market_delay.py` adds matched origin-start/delayed-start labels in a fresh nonoverlapping 30-day period, reusing the existing fitting routine unchanged. It freezes both pipelines before protected test parsing and reports three jointly resampled contrasts. Seven new fixtures bring the suite to 108; see [fresh-period findings](market-delay-results.md).
 
 **Real-market pilot:** `market_study.py` separates development and protected test execution, fits equal-day weighted AR(5) with training-only scaling, freezes validation choices and reports day-level losses/paired exploratory bootstrap intervals. Nine tests bring the suite to 101. See [the real recorded-market study](market-study-results.md); no neural RippleNet or cause labels are introduced.

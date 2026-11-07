@@ -6,6 +6,8 @@ This repository tests a proposed distinction between observation corruption and 
 
 ## Current results
 
+The multi-session Kraken quote comparison finds no aggregate trade-MSE benefit beyond a fixed starting-gap correction: the fitted model is 0.061% worse. Midpoint MSE improves 0.761% versus its selected constant, with worse MAE. Only three monthly test sessions and 17.73% grid scoring coverage support descriptive conclusions. [Results, mechanical baseline and audit](docs/quote-study-results.md). Fitted parameters remain private under source terms.
+
 The free paired Kraken trade/quote sample passed a bounded audit: 73,704 trades, 862,680 BBO records, matching integrity checks and independently reproduced backward alignment. It supports designing a collector-clock comparison, with missing trade IDs, clock ties and single-session limits explicit. No quote-based model has been fitted. [Readiness findings and audit](docs/quote-readiness-results.md).
 
 The fresh-period paired-target control finds 13.44% MSE improvement for an origin-start return and 3.24% when the return starts one trade later, on matched October 2017 test origins. MAE is worse for both (0.62% and 4.14%). The result supports substantial near-origin concentration of recorded-price predictability, without identifying its cause. [Fresh-period control, uncertainty and audit](docs/market-delay-results.md).
@@ -75,6 +77,7 @@ To reproduce the frozen benchmark into a separate directory, run `python -m ripp
 - [Real recorded-market study](docs/market-study-results.md): 30 fixed BTCUSDT dates, protected test comparison, source provenance, uncertainty and competing explanations.
 - [Fresh-period delayed-start control](docs/market-delay-results.md): matched origins and features, target-specific fits, common-reference contrast and all paired losses.
 - [Paired quote/trade readiness](docs/quote-readiness-results.md): bounded free-sample inspection, strict backward alignment, source-specific rights and the next experiment's gates.
+- [Multi-session trade/midpoint study](docs/quote-study-results.md): shared inputs, fixed gap-reversion control, protected selections, conditional coverage and descriptive held-out losses.
 
 To reproduce v2 into a separate directory, run `python -m ripplenet.history_experiment --stage final --output work/v2-reproduction`. This repeats disclosed seeds and does not supply a new independent test.
 
