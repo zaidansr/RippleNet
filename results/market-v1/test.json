@@ -1,0 +1,584 @@
+{
+  "scope": "retrieved early-period BTCUSDT trade-price forecasting; not verified original as-of history",
+  "plan_public_commit": "ad52381d89716c20076d07333f8656c97fa415cd",
+  "attribution": "Binance Vision; derived research findings, no raw trades",
+  "findings_license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+  "source": "https://data.binance.vision/",
+  "changes": "Computed features, forecasts, coverage, losses and uncertainty from recorded trades",
+  "data_terms": "https://github.com/binance/binance-public-data/blob/master/TERMS_AND_CONDITIONS.md",
+  "source_sha256": {
+    "ripplenet/market_study.py": "6f822a50ccf68b9ca41b3a19997ef5e6facb29dadf5694bcaebb5b2a85f73572",
+    "ripplenet/archive_import.py": "6ae4aa996394467e07bd8019401f06ec931a76630033387de0be97a724e2e39b",
+    "docs/market-study-plan.md": "c81ae874a0c3d7ccb21bdbab7932120f395a4d409575766e5cc51111aa811395"
+  },
+  "source_tree_at_run": "ce3949aaf8fcca8d251ab1a4b0a6c3aac67c84c0",
+  "runtime": {
+    "python": "3.13.3",
+    "numpy": "2.3.2"
+  },
+  "selection_sha256": "aeb69deb5ab7f78c64ddac302e3fd31be09670d90506f753f8c49ba72bc5e980",
+  "model_alpha": 0.0,
+  "selected_baseline": "constant",
+  "daily": [
+    {
+      "date": "2017-09-01",
+      "coverage": {
+        "date": "2017-09-01",
+        "recorded_rows": 4000,
+        "eligible_origins": 3985,
+        "feature_unavailable_origins": 5,
+        "target_censored_origins": 10,
+        "observed_targets_before_feature_restriction": 3990,
+        "archive_sha256": "5423da7aabd72711e35fb657b32e78c189b4eb27349b8c9111845df59a03df0a",
+        "csv_sha256": "d9c6209d4d150e3940c29f4d0de212d3324354b36c4c681f4dcf9cb131ccc068"
+      },
+      "losses": {
+        "candidate": {
+          "mse": 9.538355189145009e-06,
+          "mae": 0.002069074736153905
+        },
+        "zero": {
+          "mse": 1.1437139505368123e-05,
+          "mae": 0.0021254165584450673
+        },
+        "constant": {
+          "mse": 1.1436393726713942e-05,
+          "mae": 0.0021274869172879514
+        },
+        "lagmean": {
+          "mse": 6.153745750078144e-05,
+          "mae": 0.004978415459222824
+        }
+      }
+    },
+    {
+      "date": "2017-09-02",
+      "coverage": {
+        "date": "2017-09-02",
+        "recorded_rows": 7475,
+        "eligible_origins": 7460,
+        "feature_unavailable_origins": 5,
+        "target_censored_origins": 10,
+        "observed_targets_before_feature_restriction": 7465,
+        "archive_sha256": "76bb6e477cf134311ada3be8191db9bb25f2f12bc117fc70828df0cd82b12c08",
+        "csv_sha256": "809a9bc579c0b2c21182475255f4fb81bea9d63a0de44f843971d028d93f6e51"
+      },
+      "losses": {
+        "candidate": {
+          "mse": 2.0911897358371445e-05,
+          "mae": 0.002731966464884774
+        },
+        "zero": {
+          "mse": 2.376955458160908e-05,
+          "mae": 0.002718947859768379
+        },
+        "constant": {
+          "mse": 2.377123085161016e-05,
+          "mae": 0.0027220988412060038
+        },
+        "lagmean": {
+          "mse": 0.00011872837243716494,
+          "mae": 0.006140333089291099
+        }
+      }
+    },
+    {
+      "date": "2017-09-03",
+      "coverage": {
+        "date": "2017-09-03",
+        "recorded_rows": 6022,
+        "eligible_origins": 6007,
+        "feature_unavailable_origins": 5,
+        "target_censored_origins": 10,
+        "observed_targets_before_feature_restriction": 6012,
+        "archive_sha256": "d1ad9fb5c80b3d3091487d1f47194a65450198314c094ebcda0f2c8bdc490c51",
+        "csv_sha256": "097c9e327e6e7d9bb1c6446e77a0130ddb6d6d9c18be5a275502197a64efab1d"
+      },
+      "losses": {
+        "candidate": {
+          "mse": 1.4808467326006914e-05,
+          "mae": 0.002495791621791354
+        },
+        "zero": {
+          "mse": 1.7051100824533536e-05,
+          "mae": 0.002528006652240281
+        },
+        "constant": {
+          "mse": 1.705126609075179e-05,
+          "mae": 0.00253013454452148
+        },
+        "lagmean": {
+          "mse": 8.61076094813733e-05,
+          "mae": 0.005762527445943006
+        }
+      }
+    },
+    {
+      "date": "2017-09-04",
+      "coverage": {
+        "date": "2017-09-04",
+        "recorded_rows": 9317,
+        "eligible_origins": 9302,
+        "feature_unavailable_origins": 5,
+        "target_censored_origins": 10,
+        "observed_targets_before_feature_restriction": 9307,
+        "archive_sha256": "dfb13d2d5108c65429ee0d0e84e5706740c20c1c015d079654cb3f4f6f62a267",
+        "csv_sha256": "c8a48eaaf4fd2514ab43a1a404fac5006402daff9ec200a8ddecda4b4da83b86"
+      },
+      "losses": {
+        "candidate": {
+          "mse": 2.7717241340493874e-05,
+          "mae": 0.002971474256520921
+        },
+        "zero": {
+          "mse": 3.247808630507311e-05,
+          "mae": 0.002958197532556842
+        },
+        "constant": {
+          "mse": 3.2479721385827964e-05,
+          "mae": 0.0029610125735354343
+        },
+        "lagmean": {
+          "mse": 0.00017577204227589268,
+          "mae": 0.006853271768375184
+        }
+      }
+    },
+    {
+      "date": "2017-09-05",
+      "coverage": {
+        "date": "2017-09-05",
+        "recorded_rows": 10084,
+        "eligible_origins": 10069,
+        "feature_unavailable_origins": 5,
+        "target_censored_origins": 10,
+        "observed_targets_before_feature_restriction": 10074,
+        "archive_sha256": "d5710f134401abb29edf3e155c487a810d79a692534d784472ef91a84c1e3239",
+        "csv_sha256": "a3edcaa08191f3ef819bd657e4ee42d5e862a7b11c5af2ac8fde06596fdab4ab"
+      },
+      "losses": {
+        "candidate": {
+          "mse": 1.818510471967732e-05,
+          "mae": 0.0023880418869715483
+        },
+        "zero": {
+          "mse": 2.056697086553185e-05,
+          "mae": 0.0023794100744632092
+        },
+        "constant": {
+          "mse": 2.056600724319612e-05,
+          "mae": 0.0023818767149042623
+        },
+        "lagmean": {
+          "mse": 0.00010157785504764481,
+          "mae": 0.005259538221004404
+        }
+      }
+    },
+    {
+      "date": "2017-09-06",
+      "coverage": {
+        "date": "2017-09-06",
+        "recorded_rows": 7956,
+        "eligible_origins": 7941,
+        "feature_unavailable_origins": 5,
+        "target_censored_origins": 10,
+        "observed_targets_before_feature_restriction": 7946,
+        "archive_sha256": "0854b45fa6cdc45a7dab85f75e8f7e9257c474eef242ac181e1c82351b3eceb8",
+        "csv_sha256": "a11c3dfd3b3803242496cf5df3ca018738135959ee989e682d73ad74ef66e183"
+      },
+      "losses": {
+        "candidate": {
+          "mse": 5.35076897613977e-06,
+          "mae": 0.00138246150744099
+        },
+        "zero": {
+          "mse": 5.921479576528343e-06,
+          "mae": 0.0013575913337383937
+        },
+        "constant": {
+          "mse": 5.920379887145814e-06,
+          "mae": 0.0013605602189627794
+        },
+        "lagmean": {
+          "mse": 2.742273028197059e-05,
+          "mae": 0.0030210986721601997
+        }
+      }
+    },
+    {
+      "date": "2017-09-07",
+      "coverage": {
+        "date": "2017-09-07",
+        "recorded_rows": 3070,
+        "eligible_origins": 3055,
+        "feature_unavailable_origins": 5,
+        "target_censored_origins": 10,
+        "observed_targets_before_feature_restriction": 3060,
+        "archive_sha256": "09fad125efacfeb77478ea92ec05e076425bdff601cf3a7f9fb12147d12846bf",
+        "csv_sha256": "fd4c6d24c7f8bf91d021b7a2d29983d5324d5f932603818f2dc710c75a306c88"
+      },
+      "losses": {
+        "candidate": {
+          "mse": 1.5079999629817077e-05,
+          "mae": 0.002660061623786617
+        },
+        "zero": {
+          "mse": 1.7211948523366654e-05,
+          "mae": 0.0027118276039610964
+        },
+        "constant": {
+          "mse": 1.7210585430995534e-05,
+          "mae": 0.002712827265665038
+        },
+        "lagmean": {
+          "mse": 8.4273509970691e-05,
+          "mae": 0.005878869442233348
+        }
+      }
+    },
+    {
+      "date": "2017-09-08",
+      "coverage": {
+        "date": "2017-09-08",
+        "recorded_rows": 4733,
+        "eligible_origins": 4718,
+        "feature_unavailable_origins": 5,
+        "target_censored_origins": 10,
+        "observed_targets_before_feature_restriction": 4723,
+        "archive_sha256": "d8ee766cf053c55fcb0139d7f0c9cee32f1aeeb9c35bf48a2084b6e19f08766c",
+        "csv_sha256": "d4cf2a92dd66540e248ace4d711c6e1dfbafccd46d4fdc095244d3a5297c6e59"
+      },
+      "losses": {
+        "candidate": {
+          "mse": 2.3007352979003616e-05,
+          "mae": 0.003354821488172499
+        },
+        "zero": {
+          "mse": 2.27023677744274e-05,
+          "mae": 0.0032491620696279973
+        },
+        "constant": {
+          "mse": 2.2705756534539408e-05,
+          "mae": 0.0032505716182292697
+        },
+        "lagmean": {
+          "mse": 8.014484916260141e-05,
+          "mae": 0.006115446826884033
+        }
+      }
+    },
+    {
+      "date": "2017-09-09",
+      "coverage": {
+        "date": "2017-09-09",
+        "recorded_rows": 3777,
+        "eligible_origins": 3762,
+        "feature_unavailable_origins": 5,
+        "target_censored_origins": 10,
+        "observed_targets_before_feature_restriction": 3767,
+        "archive_sha256": "4373e35f7bac4985aa54cc0ef39557883654ae137b941210be18d6b199c3530a",
+        "csv_sha256": "e5edaa3b768b902a9f8f132863882ad0935111f765c18d59330ad3ff7c7f80aa"
+      },
+      "losses": {
+        "candidate": {
+          "mse": 9.714972055633274e-06,
+          "mae": 0.0021470011336543
+        },
+        "zero": {
+          "mse": 1.038038582484024e-05,
+          "mae": 0.0021328920037741927
+        },
+        "constant": {
+          "mse": 1.0380556873377354e-05,
+          "mae": 0.0021338359571781013
+        },
+        "lagmean": {
+          "mse": 4.5045882695631465e-05,
+          "mae": 0.004485500239496449
+        }
+      }
+    },
+    {
+      "date": "2017-09-10",
+      "coverage": {
+        "date": "2017-09-10",
+        "recorded_rows": 3435,
+        "eligible_origins": 3420,
+        "feature_unavailable_origins": 5,
+        "target_censored_origins": 10,
+        "observed_targets_before_feature_restriction": 3425,
+        "archive_sha256": "57441317b49982ca85d5b460e298fa4f94bfca25f18c2109a37e7d10127fed2c",
+        "csv_sha256": "dbe6ee59749cf2d4e581fadd7bdfde691c09be7ea0d9572f3b7c8ce950eff89b"
+      },
+      "losses": {
+        "candidate": {
+          "mse": 2.2349099952619344e-05,
+          "mae": 0.003237583670682616
+        },
+        "zero": {
+          "mse": 2.404511183611705e-05,
+          "mae": 0.0032281223174177153
+        },
+        "constant": {
+          "mse": 2.4046134264936825e-05,
+          "mae": 0.003229604999099659
+        },
+        "lagmean": {
+          "mse": 0.00010800280981261374,
+          "mae": 0.0069331919228061995
+        }
+      }
+    },
+    {
+      "date": "2017-09-11",
+      "coverage": {
+        "date": "2017-09-11",
+        "recorded_rows": 4228,
+        "eligible_origins": 4213,
+        "feature_unavailable_origins": 5,
+        "target_censored_origins": 10,
+        "observed_targets_before_feature_restriction": 4218,
+        "archive_sha256": "97852184f57fd0f928d043b8115d28de99a6766b253ea5b994898e0a5736563a",
+        "csv_sha256": "55f1e1eff8b8076feb037644e6ed4d431ff8d5a4a493bbd4a7b33367a4614256"
+      },
+      "losses": {
+        "candidate": {
+          "mse": 2.6662028975523678e-05,
+          "mae": 0.0032626783759595024
+        },
+        "zero": {
+          "mse": 2.9257732929937415e-05,
+          "mae": 0.0032954608548227166
+        },
+        "constant": {
+          "mse": 2.9257167429023406e-05,
+          "mae": 0.0032966156627446267
+        },
+        "lagmean": {
+          "mse": 0.00014240988105842923,
+          "mae": 0.007205311932736513
+        }
+      }
+    },
+    {
+      "date": "2017-09-12",
+      "coverage": {
+        "date": "2017-09-12",
+        "recorded_rows": 6501,
+        "eligible_origins": 6486,
+        "feature_unavailable_origins": 5,
+        "target_censored_origins": 10,
+        "observed_targets_before_feature_restriction": 6491,
+        "archive_sha256": "a3dc4410afc3f84f377fb2cc5c002e76ee49b899779a5c68d691685baa52e272",
+        "csv_sha256": "12288986aac339a3d5a01ca17be249c679abfdf6b9231c40ffbc989f3667806e"
+      },
+      "losses": {
+        "candidate": {
+          "mse": 6.24015906823941e-06,
+          "mae": 0.0015122090171143657
+        },
+        "zero": {
+          "mse": 6.473313483082849e-06,
+          "mae": 0.0014865992493848033
+        },
+        "constant": {
+          "mse": 6.473707190687076e-06,
+          "mae": 0.0014890365153310435
+        },
+        "lagmean": {
+          "mse": 2.6971372140624163e-05,
+          "mae": 0.003087340005577481
+        }
+      }
+    },
+    {
+      "date": "2017-09-13",
+      "coverage": {
+        "date": "2017-09-13",
+        "recorded_rows": 5019,
+        "eligible_origins": 5004,
+        "feature_unavailable_origins": 5,
+        "target_censored_origins": 10,
+        "observed_targets_before_feature_restriction": 5009,
+        "archive_sha256": "6a6e41cb6040e865592927a6a3d987ba07ecfbdd49b334e5ae7a051a4a8811f5",
+        "csv_sha256": "fc19b8dbd40809dfab1de327b0aa4729c8455a808f4b573116e2a550b6704db3"
+      },
+      "losses": {
+        "candidate": {
+          "mse": 2.127717972839859e-05,
+          "mae": 0.0024752949572118166
+        },
+        "zero": {
+          "mse": 2.173238243546601e-05,
+          "mae": 0.0023505738353673394
+        },
+        "constant": {
+          "mse": 2.1734540154144363e-05,
+          "mae": 0.002354150713459708
+        },
+        "lagmean": {
+          "mse": 8.477388014678214e-05,
+          "mae": 0.004775460968286975
+        }
+      }
+    },
+    {
+      "date": "2017-09-14",
+      "coverage": {
+        "date": "2017-09-14",
+        "recorded_rows": 9066,
+        "eligible_origins": 9051,
+        "feature_unavailable_origins": 5,
+        "target_censored_origins": 10,
+        "observed_targets_before_feature_restriction": 9056,
+        "archive_sha256": "bec85c877210205eabc874cd01e330177e056116c46b708e54310eff30bc27c3",
+        "csv_sha256": "bc834e005803df0686e7e72054a900d349ebab2f3f193102e2497e133456bd5a"
+      },
+      "losses": {
+        "candidate": {
+          "mse": 2.0656732146912158e-05,
+          "mae": 0.0028731385741333233
+        },
+        "zero": {
+          "mse": 2.1170267484961974e-05,
+          "mae": 0.0027525782850196913
+        },
+        "constant": {
+          "mse": 2.1173933831250766e-05,
+          "mae": 0.002755356788375525
+        },
+        "lagmean": {
+          "mse": 8.487469161113184e-05,
+          "mae": 0.005652855703477452
+        }
+      }
+    },
+    {
+      "date": "2017-09-15",
+      "coverage": {
+        "date": "2017-09-15",
+        "recorded_rows": 10445,
+        "eligible_origins": 10430,
+        "feature_unavailable_origins": 5,
+        "target_censored_origins": 10,
+        "observed_targets_before_feature_restriction": 10435,
+        "archive_sha256": "e7aff5393af07e17df8934e81a4f4c7ba16568805800440b82dcfb35b6f74038",
+        "csv_sha256": "ec228999d3224add6ff58b1df76d34270cce7a919a6e833810a629d24805dcb2"
+      },
+      "losses": {
+        "candidate": {
+          "mse": 3.587323445056423e-05,
+          "mae": 0.0038711808741564526
+        },
+        "zero": {
+          "mse": 3.7210479586701845e-05,
+          "mae": 0.003755931782969931
+        },
+        "constant": {
+          "mse": 3.7208290755175436e-05,
+          "mae": 0.00375774631945373
+        },
+        "lagmean": {
+          "mse": 0.00015205760611404623,
+          "mae": 0.007681056979969156
+        }
+      }
+    }
+  ],
+  "equal_day_risk": {
+    "candidate": {
+      "mse": 1.849150625976971e-05,
+      "mae": 0.002628852012575665
+    },
+    "zero": {
+      "mse": 2.0093888102503033e-05,
+      "mae": 0.002602047867570511
+    },
+    "constant": {
+      "mse": 2.0094378109958394e-05,
+      "mae": 0.0026041943766636406
+    },
+    "lagmean": {
+      "mse": 9.198003664915857e-05,
+      "mae": 0.005588681245164288
+    }
+  },
+  "pooled_origin_risk_secondary": {
+    "candidate": {
+      "mse": 1.953977302960396e-05,
+      "mae": 0.0026522600856614333
+    },
+    "zero": {
+      "mse": 2.124525927812375e-05,
+      "mae": 0.0026158216453181908
+    },
+    "constant": {
+      "mse": 2.1245729095020917e-05,
+      "mae": 0.0026181409501108504
+    },
+    "lagmean": {
+      "mse": 9.748334825600893e-05,
+      "mae": 0.005625873035318561
+    }
+  },
+  "primary_contrasts": {
+    "versus_zero": {
+      "gain_fraction": 0.07974473802975535,
+      "absolute_mse_reduction": 1.6023818427333214e-06,
+      "raw_95_gain": [
+        0.04567652908272782,
+        0.11903567556824629
+      ],
+      "adjusted_97_5_gain": [
+        0.041195806841114915,
+        0.1219940667339543
+      ],
+      "raw_95_absolute": [
+        8.648315642201389e-07,
+        2.4309239541801725e-06
+      ],
+      "adjusted_97_5_absolute": [
+        7.814869609426369e-07,
+        2.5733376552998873e-06
+      ],
+      "bootstrap_mean_gain": 0.08179994817776089,
+      "bootstrap_centering_shift": 0.00205521014800554,
+      "n_days": 15,
+      "block_days": 3,
+      "resamples": 9999,
+      "seed": 190011,
+      "caution": "Approximate exploratory intervals; few blocks; noncircular endpoints are underweighted"
+    },
+    "versus_selected_baseline": {
+      "gain_fraction": 0.07976717873116612,
+      "absolute_mse_reduction": 1.6028718501886822e-06,
+      "raw_95_gain": [
+        0.04571384712483943,
+        0.11904815124916587
+      ],
+      "adjusted_97_5_gain": [
+        0.04124161950738274,
+        0.1220025515518828
+      ],
+      "raw_95_absolute": [
+        8.655609355350535e-07,
+        2.4315564120214066e-06
+      ],
+      "adjusted_97_5_absolute": [
+        7.825391395885223e-07,
+        2.574084859817695e-06
+      ],
+      "bootstrap_mean_gain": 0.08182703713422704,
+      "bootstrap_centering_shift": 0.0020598584030609157,
+      "n_days": 15,
+      "block_days": 3,
+      "resamples": 9999,
+      "seed": 190011,
+      "caution": "Approximate exploratory intervals; few blocks; noncircular endpoints are underweighted"
+    }
+  },
+  "distinct_primary_comparisons": 2,
+  "meaningful_market_margin": null,
+  "no_correction_or_shock_supervision": true
+}

@@ -1,5 +1,7 @@
 # Component choice and implementation assumptions
 
+**Real-market pilot:** `market_study.py` separates development and protected test execution, fits equal-day weighted AR(5) with training-only scaling, freezes validation choices and reports day-level losses/paired exploratory bootstrap intervals. Nine tests bring the suite to 101. See [the real recorded-market study](market-study-results.md); no neural RippleNet or cause labels are introduced.
+
 **Information diagnostic:** `information.py` computes exact scalar mixture posteriors, same-input LMMSE and deterministic risk integrals. `information_experiment.py` executes five fixed conditions at four frozen quadrature orders, records provenance and checks numerical convergence. Ten new tests bring the suite to 92. No model is trained; see [the new conditional findings](information-diagnostic-results.md).
 
 **Offline archive update:** `archive_import.py` adds a bounded local CLI, strict lazy spot-trade parsing and one target attachment per origin. It preserves source IDs separately from replay row ordinals, retains pending/censored outcomes, and refuses correction labels without a ledger. Thirteen new tests bring the suite to 82. This is retrieved-file-order engineering validation, not a real-data forecasting experiment. See [implementation and independent review](archive-import-results.md).
