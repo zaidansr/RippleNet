@@ -1,5 +1,7 @@
 # Component choice and implementation assumptions
 
+**Paired-target real-market control:** `market_delay.py` adds matched origin-start/delayed-start labels in a fresh nonoverlapping 30-day period, reusing the existing fitting routine unchanged. It freezes both pipelines before protected test parsing and reports three jointly resampled contrasts. Seven new fixtures bring the suite to 108; see [fresh-period findings](market-delay-results.md).
+
 **Real-market pilot:** `market_study.py` separates development and protected test execution, fits equal-day weighted AR(5) with training-only scaling, freezes validation choices and reports day-level losses/paired exploratory bootstrap intervals. Nine tests bring the suite to 101. See [the real recorded-market study](market-study-results.md); no neural RippleNet or cause labels are introduced.
 
 **Information diagnostic:** `information.py` computes exact scalar mixture posteriors, same-input LMMSE and deterministic risk integrals. `information_experiment.py` executes five fixed conditions at four frozen quadrature orders, records provenance and checks numerical convergence. Ten new tests bring the suite to 92. No model is trained; see [the new conditional findings](information-diagnostic-results.md).

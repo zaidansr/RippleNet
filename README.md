@@ -6,6 +6,8 @@ This repository tests a proposed distinction between observation corruption and 
 
 ## Current results
 
+The fresh-period paired-target control finds 13.44% MSE improvement for an origin-start return and 3.24% when the return starts one trade later, on matched October 2017 test origins. MAE is worse for both (0.62% and 4.14%). The result supports substantial near-origin concentration of recorded-price predictability, without identifying its cause. [Fresh-period control, uncertainty and audit](docs/market-delay-results.md).
+
 The first real recorded-market study uses 30 days of historical BTCUSDT trades with a 10/5/15-day train/validation/test split. A validation-selected AR(5) baseline improves held-out equal-day MSE by 7.98% versus the selected constant baseline, while MAE is 0.95% worse. Exploratory dependence-aware intervals and the early-period/archive limits are explicit. This does not validate RippleNet's cause mechanism or profitability. [Real-data findings and independent review](docs/market-study-results.md).
 
 Market-data-derived findings are attributed to Binance Vision and distributed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/), with computed changes and source links documented in the report. This notice does not relicense independent project code.
@@ -69,6 +71,7 @@ To reproduce the frozen benchmark into a separate directory, run `python -m ripp
 - [Research frontier](docs/research-frontier.md): why the current evidence gate remains unmet and which new questions could follow.
 - [Auxiliary-information diagnostic](docs/information-diagnostic-results.md): frozen new scalar question, information versus same-input approximation gaps, analytic controls and all quadrature orders.
 - [Real recorded-market study](docs/market-study-results.md): 30 fixed BTCUSDT dates, protected test comparison, source provenance, uncertainty and competing explanations.
+- [Fresh-period delayed-start control](docs/market-delay-results.md): matched origins and features, target-specific fits, common-reference contrast and all paired losses.
 
 To reproduce v2 into a separate directory, run `python -m ripplenet.history_experiment --stage final --output work/v2-reproduction`. This repeats disclosed seeds and does not supply a new independent test.
 

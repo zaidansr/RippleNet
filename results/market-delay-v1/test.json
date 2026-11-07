@@ -1,0 +1,1174 @@
+{
+  "scope": "fresh-period paired retrieved-row target control; not a causal bounce identification",
+  "plan_public_commit": "1cdfb3d0fe3eed36e1892d10c4c7c78ec84be3c6",
+  "attribution": "Binance Vision; derived research findings, no raw trades",
+  "findings_license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+  "source": "https://data.binance.vision/",
+  "changes": "Computed features, forecasts, coverage, losses and uncertainty from recorded trades",
+  "data_terms": "https://github.com/binance/binance-public-data/blob/master/TERMS_AND_CONDITIONS.md",
+  "definitions": {
+    "origin": "logP[k+10]-logP[k]",
+    "delayed": "logP[k+11]-logP[k+1]",
+    "inputs": "r[k] through r[k-4]",
+    "common_eligible": "k=5..N-12"
+  },
+  "source_sha256": {
+    "ripplenet/market_delay.py": "d858b37e6734e84981f145324e60946374da5c5d8d0fd9be9d79c464fa335c04",
+    "ripplenet/market_study.py": "6f822a50ccf68b9ca41b3a19997ef5e6facb29dadf5694bcaebb5b2a85f73572",
+    "ripplenet/archive_import.py": "6ae4aa996394467e07bd8019401f06ec931a76630033387de0be97a724e2e39b",
+    "docs/market-delay-plan.md": "9969ded7a912ae930377a839921589302e8835f4ca5855b048ce34db32a98d4d"
+  },
+  "source_tree_at_run": "6d8c84a6f7381e73972a93e519a71c9be5040ef1",
+  "runtime": {
+    "python": "3.13.3",
+    "numpy": "2.3.2"
+  },
+  "selection_sha256": "3aedd42cf4a11923dac716f4846fecee8a0e9d1eb9db064863c7b614c70a5b6b",
+  "daily": [
+    {
+      "date": "2017-10-01",
+      "targets": {
+        "origin": {
+          "coverage": {
+            "date": "2017-10-01",
+            "recorded_rows": 9816,
+            "eligible_origins": 9800,
+            "feature_unavailable_origins": 5,
+            "archive_sha256": "95121a7a4bd4a159817bd70a6209f246a108a816fd1ca78bee1fa46540512c5f",
+            "csv_sha256": "90d04742d4b8cf445e7ffec46d97e90aa695a911fd90fc40ccdb23bd74b9426c",
+            "target": "origin",
+            "target_censored_origins": 10,
+            "additional_paired_alignment_exclusions": 1
+          },
+          "losses": {
+            "candidate": {
+              "mse": 5.421072468657917e-06,
+              "mae": 0.0015641010376706641
+            },
+            "zero": {
+              "mse": 6.81939385180959e-06,
+              "mae": 0.001584587426692953
+            },
+            "constant": {
+              "mse": 6.819317939566443e-06,
+              "mae": 0.0015873312137486913
+            },
+            "lagmean": {
+              "mse": 4.021421641194255e-05,
+              "mae": 0.003975705212697972
+            }
+          }
+        },
+        "delayed": {
+          "coverage": {
+            "date": "2017-10-01",
+            "recorded_rows": 9816,
+            "eligible_origins": 9800,
+            "feature_unavailable_origins": 5,
+            "archive_sha256": "95121a7a4bd4a159817bd70a6209f246a108a816fd1ca78bee1fa46540512c5f",
+            "csv_sha256": "90d04742d4b8cf445e7ffec46d97e90aa695a911fd90fc40ccdb23bd74b9426c",
+            "target": "delayed",
+            "target_censored_origins": 11,
+            "additional_paired_alignment_exclusions": 0
+          },
+          "losses": {
+            "candidate": {
+              "mse": 6.335581864212873e-06,
+              "mae": 0.0016428419798292652
+            },
+            "zero": {
+              "mse": 6.819406110397016e-06,
+              "mae": 0.0015846209659539975
+            },
+            "constant": {
+              "mse": 6.819330893567637e-06,
+              "mae": 0.0015873940815931457
+            },
+            "lagmean": {
+              "mse": 3.603199331366288e-05,
+              "mae": 0.0037940923095616166
+            }
+          }
+        }
+      }
+    },
+    {
+      "date": "2017-10-02",
+      "targets": {
+        "origin": {
+          "coverage": {
+            "date": "2017-10-02",
+            "recorded_rows": 8185,
+            "eligible_origins": 8169,
+            "feature_unavailable_origins": 5,
+            "archive_sha256": "99700ac5053aea321da082c96b2b2a9b13d6fee2966b52ee024ed3b29ac364c9",
+            "csv_sha256": "464eebdc3fc9fcd862acb10669dc115c8c579a1199e9df288c2a24476ab8536e",
+            "target": "origin",
+            "target_censored_origins": 10,
+            "additional_paired_alignment_exclusions": 1
+          },
+          "losses": {
+            "candidate": {
+              "mse": 6.0164791657030946e-06,
+              "mae": 0.0014761048799970748
+            },
+            "zero": {
+              "mse": 7.162897281966499e-06,
+              "mae": 0.0014660408047213734
+            },
+            "constant": {
+              "mse": 7.163078360793636e-06,
+              "mae": 0.0014685028254207378
+            },
+            "lagmean": {
+              "mse": 4.220330756182759e-05,
+              "mae": 0.003511743654090894
+            }
+          }
+        },
+        "delayed": {
+          "coverage": {
+            "date": "2017-10-02",
+            "recorded_rows": 8185,
+            "eligible_origins": 8169,
+            "feature_unavailable_origins": 5,
+            "archive_sha256": "99700ac5053aea321da082c96b2b2a9b13d6fee2966b52ee024ed3b29ac364c9",
+            "csv_sha256": "464eebdc3fc9fcd862acb10669dc115c8c579a1199e9df288c2a24476ab8536e",
+            "target": "delayed",
+            "target_censored_origins": 11,
+            "additional_paired_alignment_exclusions": 0
+          },
+          "losses": {
+            "candidate": {
+              "mse": 6.6282337860727e-06,
+              "mae": 0.0015148718435151697
+            },
+            "zero": {
+              "mse": 7.162897218734686e-06,
+              "mae": 0.0014660380225532993
+            },
+            "constant": {
+              "mse": 7.1630805217102634e-06,
+              "mae": 0.0014685248802372897
+            },
+            "lagmean": {
+              "mse": 3.928459336790706e-05,
+              "mae": 0.0033798544253382744
+            }
+          }
+        }
+      }
+    },
+    {
+      "date": "2017-10-03",
+      "targets": {
+        "origin": {
+          "coverage": {
+            "date": "2017-10-03",
+            "recorded_rows": 12379,
+            "eligible_origins": 12363,
+            "feature_unavailable_origins": 5,
+            "archive_sha256": "a3e4766cab90c56bb4e4fb840066945abd1e22d3c365698db7361dc81703a6dd",
+            "csv_sha256": "8ea763a18c048c771c15035934c7c3b5512dc69a0692643d09f5a19fca296e70",
+            "target": "origin",
+            "target_censored_origins": 10,
+            "additional_paired_alignment_exclusions": 1
+          },
+          "losses": {
+            "candidate": {
+              "mse": 4.583343800656056e-06,
+              "mae": 0.0013478999475434802
+            },
+            "zero": {
+              "mse": 5.271010965031469e-06,
+              "mae": 0.0013357891271127437
+            },
+            "constant": {
+              "mse": 5.271335158865386e-06,
+              "mae": 0.0013387680042107413
+            },
+            "lagmean": {
+              "mse": 2.76834507647878e-05,
+              "mae": 0.003157175483346364
+            }
+          }
+        },
+        "delayed": {
+          "coverage": {
+            "date": "2017-10-03",
+            "recorded_rows": 12379,
+            "eligible_origins": 12363,
+            "feature_unavailable_origins": 5,
+            "archive_sha256": "a3e4766cab90c56bb4e4fb840066945abd1e22d3c365698db7361dc81703a6dd",
+            "csv_sha256": "8ea763a18c048c771c15035934c7c3b5512dc69a0692643d09f5a19fca296e70",
+            "target": "delayed",
+            "target_censored_origins": 11,
+            "additional_paired_alignment_exclusions": 0
+          },
+          "losses": {
+            "candidate": {
+              "mse": 5.036204136758389e-06,
+              "mae": 0.0013829692179667377
+            },
+            "zero": {
+              "mse": 5.272938782078976e-06,
+              "mae": 0.0013361840124187225
+            },
+            "constant": {
+              "mse": 5.273259441051914e-06,
+              "mae": 0.0013391898143297178
+            },
+            "lagmean": {
+              "mse": 2.518250422176031e-05,
+              "mae": 0.003039189961676433
+            }
+          }
+        }
+      }
+    },
+    {
+      "date": "2017-10-04",
+      "targets": {
+        "origin": {
+          "coverage": {
+            "date": "2017-10-04",
+            "recorded_rows": 11006,
+            "eligible_origins": 10990,
+            "feature_unavailable_origins": 5,
+            "archive_sha256": "3d96d77c7a74f976e59ac53dac00f7a8a708619fef05bba18543599b09de00a6",
+            "csv_sha256": "d4cc90d5f0b7f2e8e2a7cc7be0a8d637c5b77c52a334dafa731b4899d3b6ef86",
+            "target": "origin",
+            "target_censored_origins": 10,
+            "additional_paired_alignment_exclusions": 1
+          },
+          "losses": {
+            "candidate": {
+              "mse": 4.530335168226819e-06,
+              "mae": 0.0013583247389914893
+            },
+            "zero": {
+              "mse": 5.408117791308662e-06,
+              "mae": 0.001367159622147818
+            },
+            "constant": {
+              "mse": 5.408581077421568e-06,
+              "mae": 0.0013701959773007833
+            },
+            "lagmean": {
+              "mse": 2.9568750603251495e-05,
+              "mae": 0.0033105417018445176
+            }
+          }
+        },
+        "delayed": {
+          "coverage": {
+            "date": "2017-10-04",
+            "recorded_rows": 11006,
+            "eligible_origins": 10990,
+            "feature_unavailable_origins": 5,
+            "archive_sha256": "3d96d77c7a74f976e59ac53dac00f7a8a708619fef05bba18543599b09de00a6",
+            "csv_sha256": "d4cc90d5f0b7f2e8e2a7cc7be0a8d637c5b77c52a334dafa731b4899d3b6ef86",
+            "target": "delayed",
+            "target_censored_origins": 11,
+            "additional_paired_alignment_exclusions": 0
+          },
+          "losses": {
+            "candidate": {
+              "mse": 5.152225373196886e-06,
+              "mae": 0.0014186902602563673
+            },
+            "zero": {
+              "mse": 5.408108559487503e-06,
+              "mae": 0.0013671378696815293
+            },
+            "constant": {
+              "mse": 5.408575894631069e-06,
+              "mae": 0.001370202252372507
+            },
+            "lagmean": {
+              "mse": 2.6483630306315073e-05,
+              "mae": 0.0031574273599058395
+            }
+          }
+        }
+      }
+    },
+    {
+      "date": "2017-10-05",
+      "targets": {
+        "origin": {
+          "coverage": {
+            "date": "2017-10-05",
+            "recorded_rows": 9158,
+            "eligible_origins": 9142,
+            "feature_unavailable_origins": 5,
+            "archive_sha256": "e47b465def8dbee353daf7f6e523e4660cea6b05854b64570aab7fcfe8100413",
+            "csv_sha256": "bcd06fa5024a1946b6557a96a38e75d63f6c83dcdbe641b4bb28b579172f167a",
+            "target": "origin",
+            "target_censored_origins": 10,
+            "additional_paired_alignment_exclusions": 1
+          },
+          "losses": {
+            "candidate": {
+              "mse": 4.911422351973395e-06,
+              "mae": 0.0014339538740839174
+            },
+            "zero": {
+              "mse": 5.7651281105020785e-06,
+              "mae": 0.0014606989755594248
+            },
+            "constant": {
+              "mse": 5.7648337522857e-06,
+              "mae": 0.0014632790761617497
+            },
+            "lagmean": {
+              "mse": 3.012940167676167e-05,
+              "mae": 0.0034122112470592186
+            }
+          }
+        },
+        "delayed": {
+          "coverage": {
+            "date": "2017-10-05",
+            "recorded_rows": 9158,
+            "eligible_origins": 9142,
+            "feature_unavailable_origins": 5,
+            "archive_sha256": "e47b465def8dbee353daf7f6e523e4660cea6b05854b64570aab7fcfe8100413",
+            "csv_sha256": "bcd06fa5024a1946b6557a96a38e75d63f6c83dcdbe641b4bb28b579172f167a",
+            "target": "delayed",
+            "target_censored_origins": 11,
+            "additional_paired_alignment_exclusions": 0
+          },
+          "losses": {
+            "candidate": {
+              "mse": 5.513171646950563e-06,
+              "mae": 0.0015054711737636517
+            },
+            "zero": {
+              "mse": 5.766951282823433e-06,
+              "mae": 0.0014611455493708369
+            },
+            "constant": {
+              "mse": 5.766663027928585e-06,
+              "mae": 0.0014637505446708683
+            },
+            "lagmean": {
+              "mse": 2.7176734792678155e-05,
+              "mae": 0.0032540200930116473
+            }
+          }
+        }
+      }
+    },
+    {
+      "date": "2017-10-06",
+      "targets": {
+        "origin": {
+          "coverage": {
+            "date": "2017-10-06",
+            "recorded_rows": 6546,
+            "eligible_origins": 6530,
+            "feature_unavailable_origins": 5,
+            "archive_sha256": "17edb60049d6b36faac39b36400c8edcf1d68786518b29fb109aa64b841a896e",
+            "csv_sha256": "17d93ec4aba9990da509df03097cd9e02925525f26e8850c044fb348942290b7",
+            "target": "origin",
+            "target_censored_origins": 10,
+            "additional_paired_alignment_exclusions": 1
+          },
+          "losses": {
+            "candidate": {
+              "mse": 3.7277182310414822e-06,
+              "mae": 0.001242109903343676
+            },
+            "zero": {
+              "mse": 4.2059592739728885e-06,
+              "mae": 0.0012336296098132938
+            },
+            "constant": {
+              "mse": 4.205685280548186e-06,
+              "mae": 0.0012361317966951366
+            },
+            "lagmean": {
+              "mse": 2.1895766774888127e-05,
+              "mae": 0.0028569026892599223
+            }
+          }
+        },
+        "delayed": {
+          "coverage": {
+            "date": "2017-10-06",
+            "recorded_rows": 6546,
+            "eligible_origins": 6530,
+            "feature_unavailable_origins": 5,
+            "archive_sha256": "17edb60049d6b36faac39b36400c8edcf1d68786518b29fb109aa64b841a896e",
+            "csv_sha256": "17d93ec4aba9990da509df03097cd9e02925525f26e8850c044fb348942290b7",
+            "target": "delayed",
+            "target_censored_origins": 11,
+            "additional_paired_alignment_exclusions": 0
+          },
+          "losses": {
+            "candidate": {
+              "mse": 4.052271169165528e-06,
+              "mae": 0.0012772170894950702
+            },
+            "zero": {
+              "mse": 4.200632624856216e-06,
+              "mae": 0.001232760476080175
+            },
+            "constant": {
+              "mse": 4.200372466440514e-06,
+              "mae": 0.001235286988638062
+            },
+            "lagmean": {
+              "mse": 1.9942041408074435e-05,
+              "mae": 0.0027419546566598784
+            }
+          }
+        }
+      }
+    },
+    {
+      "date": "2017-10-07",
+      "targets": {
+        "origin": {
+          "coverage": {
+            "date": "2017-10-07",
+            "recorded_rows": 4804,
+            "eligible_origins": 4788,
+            "feature_unavailable_origins": 5,
+            "archive_sha256": "04b0d4899dc757e74cec613fba5b11d3f750ed2878e32a37cd978bffec07f134",
+            "csv_sha256": "2aaee223b4dac50148b6d63b03024971f23be019b791d3fb0a6e39decb6e8213",
+            "target": "origin",
+            "target_censored_origins": 10,
+            "additional_paired_alignment_exclusions": 1
+          },
+          "losses": {
+            "candidate": {
+              "mse": 3.954869118071798e-06,
+              "mae": 0.001329314373161524
+            },
+            "zero": {
+              "mse": 4.492254298825833e-06,
+              "mae": 0.0013383694242631596
+            },
+            "constant": {
+              "mse": 4.4919014728414675e-06,
+              "mae": 0.001340775806864288
+            },
+            "lagmean": {
+              "mse": 2.154074159636182e-05,
+              "mae": 0.00302090139129323
+            }
+          }
+        },
+        "delayed": {
+          "coverage": {
+            "date": "2017-10-07",
+            "recorded_rows": 4804,
+            "eligible_origins": 4788,
+            "feature_unavailable_origins": 5,
+            "archive_sha256": "04b0d4899dc757e74cec613fba5b11d3f750ed2878e32a37cd978bffec07f134",
+            "csv_sha256": "2aaee223b4dac50148b6d63b03024971f23be019b791d3fb0a6e39decb6e8213",
+            "target": "delayed",
+            "target_censored_origins": 11,
+            "additional_paired_alignment_exclusions": 0
+          },
+          "losses": {
+            "candidate": {
+              "mse": 4.32789254073602e-06,
+              "mae": 0.0013747160196248588
+            },
+            "zero": {
+              "mse": 4.4922969827652905e-06,
+              "mae": 0.001338463365516927
+            },
+            "constant": {
+              "mse": 4.491943462659596e-06,
+              "mae": 0.0013408935975727674
+            },
+            "lagmean": {
+              "mse": 1.9653942387496655e-05,
+              "mae": 0.00291554269996964
+            }
+          }
+        }
+      }
+    },
+    {
+      "date": "2017-10-08",
+      "targets": {
+        "origin": {
+          "coverage": {
+            "date": "2017-10-08",
+            "recorded_rows": 7580,
+            "eligible_origins": 7564,
+            "feature_unavailable_origins": 5,
+            "archive_sha256": "9feb3c953bce9dbbcbf3e7448a32b27a78dd9486c60b167ff54b74ec0ba4409f",
+            "csv_sha256": "f2f6ab49b2d054d286b0d721812ce8f167a90a1612c9d56c1562a68fb02546c3",
+            "target": "origin",
+            "target_censored_origins": 10,
+            "additional_paired_alignment_exclusions": 1
+          },
+          "losses": {
+            "candidate": {
+              "mse": 3.4713512991653095e-06,
+              "mae": 0.001170355261009003
+            },
+            "zero": {
+              "mse": 3.992438339235943e-06,
+              "mae": 0.0011617867505130457
+            },
+            "constant": {
+              "mse": 3.991417855958239e-06,
+              "mae": 0.0011646035570718441
+            },
+            "lagmean": {
+              "mse": 1.968663041202954e-05,
+              "mae": 0.0026209652944557756
+            }
+          }
+        },
+        "delayed": {
+          "coverage": {
+            "date": "2017-10-08",
+            "recorded_rows": 7580,
+            "eligible_origins": 7564,
+            "feature_unavailable_origins": 5,
+            "archive_sha256": "9feb3c953bce9dbbcbf3e7448a32b27a78dd9486c60b167ff54b74ec0ba4409f",
+            "csv_sha256": "f2f6ab49b2d054d286b0d721812ce8f167a90a1612c9d56c1562a68fb02546c3",
+            "target": "delayed",
+            "target_censored_origins": 11,
+            "additional_paired_alignment_exclusions": 0
+          },
+          "losses": {
+            "candidate": {
+              "mse": 3.847244777149558e-06,
+              "mae": 0.001209538983184464
+            },
+            "zero": {
+              "mse": 3.991671477942485e-06,
+              "mae": 0.0011615924436643651
+            },
+            "constant": {
+              "mse": 3.990652098444589e-06,
+              "mae": 0.0011644394142771375
+            },
+            "lagmean": {
+              "mse": 1.778072688425632e-05,
+              "mae": 0.00251702971282038
+            }
+          }
+        }
+      }
+    },
+    {
+      "date": "2017-10-09",
+      "targets": {
+        "origin": {
+          "coverage": {
+            "date": "2017-10-09",
+            "recorded_rows": 10372,
+            "eligible_origins": 10356,
+            "feature_unavailable_origins": 5,
+            "archive_sha256": "d1190fd3b7428bc678b9f70f1806e25fdc9cf39e0277975e3cf7fd6d2422426e",
+            "csv_sha256": "fb932afeda0c9977cf6f43e4b1ee60159f878e3282f32320798a254cae9cccaa",
+            "target": "origin",
+            "target_censored_origins": 10,
+            "additional_paired_alignment_exclusions": 1
+          },
+          "losses": {
+            "candidate": {
+              "mse": 3.826411990110855e-06,
+              "mae": 0.001326004717033428
+            },
+            "zero": {
+              "mse": 4.777065713351196e-06,
+              "mae": 0.0013582619552616278
+            },
+            "constant": {
+              "mse": 4.776635785687135e-06,
+              "mae": 0.001360468354180651
+            },
+            "lagmean": {
+              "mse": 2.683135144141833e-05,
+              "mae": 0.0032740508744052025
+            }
+          }
+        },
+        "delayed": {
+          "coverage": {
+            "date": "2017-10-09",
+            "recorded_rows": 10372,
+            "eligible_origins": 10356,
+            "feature_unavailable_origins": 5,
+            "archive_sha256": "d1190fd3b7428bc678b9f70f1806e25fdc9cf39e0277975e3cf7fd6d2422426e",
+            "csv_sha256": "fb932afeda0c9977cf6f43e4b1ee60159f878e3282f32320798a254cae9cccaa",
+            "target": "delayed",
+            "target_censored_origins": 11,
+            "additional_paired_alignment_exclusions": 0
+          },
+          "losses": {
+            "candidate": {
+              "mse": 4.715707674005395e-06,
+              "mae": 0.001430520825633566
+            },
+            "zero": {
+              "mse": 4.777113342313573e-06,
+              "mae": 0.0013583151708584569
+            },
+            "constant": {
+              "mse": 4.776678805576731e-06,
+              "mae": 0.001360541745231713
+            },
+            "lagmean": {
+              "mse": 2.2593079790739285e-05,
+              "mae": 0.0030516935282575443
+            }
+          }
+        }
+      }
+    },
+    {
+      "date": "2017-10-10",
+      "targets": {
+        "origin": {
+          "coverage": {
+            "date": "2017-10-10",
+            "recorded_rows": 11967,
+            "eligible_origins": 11951,
+            "feature_unavailable_origins": 5,
+            "archive_sha256": "2964175491d5fe9faefdb99f12527d20f9bd391d78f8f0104b01a935ae13efbe",
+            "csv_sha256": "5361c4ce769d9a0c69e637a2a51217c21caff2c3ab18d23fe0e376ccd6717e5f",
+            "target": "origin",
+            "target_censored_origins": 10,
+            "additional_paired_alignment_exclusions": 1
+          },
+          "losses": {
+            "candidate": {
+              "mse": 5.537975233997792e-06,
+              "mae": 0.0015694293377887959
+            },
+            "zero": {
+              "mse": 6.787989696556874e-06,
+              "mae": 0.0015628753610593255
+            },
+            "constant": {
+              "mse": 6.788074840284328e-06,
+              "mae": 0.001565025790267569
+            },
+            "lagmean": {
+              "mse": 3.862677105650391e-05,
+              "mae": 0.0038395121993610695
+            }
+          }
+        },
+        "delayed": {
+          "coverage": {
+            "date": "2017-10-10",
+            "recorded_rows": 11967,
+            "eligible_origins": 11951,
+            "feature_unavailable_origins": 5,
+            "archive_sha256": "2964175491d5fe9faefdb99f12527d20f9bd391d78f8f0104b01a935ae13efbe",
+            "csv_sha256": "5361c4ce769d9a0c69e637a2a51217c21caff2c3ab18d23fe0e376ccd6717e5f",
+            "target": "delayed",
+            "target_censored_origins": 11,
+            "additional_paired_alignment_exclusions": 0
+          },
+          "losses": {
+            "candidate": {
+              "mse": 6.74826950192145e-06,
+              "mae": 0.0016601676923218038
+            },
+            "zero": {
+              "mse": 6.7878145835710405e-06,
+              "mae": 0.0015627543132167652
+            },
+            "constant": {
+              "mse": 6.787898999176158e-06,
+              "mae": 0.001564926279570746
+            },
+            "lagmean": {
+              "mse": 3.278590052390174e-05,
+              "mae": 0.0035726270340054917
+            }
+          }
+        }
+      }
+    },
+    {
+      "date": "2017-10-11",
+      "targets": {
+        "origin": {
+          "coverage": {
+            "date": "2017-10-11",
+            "recorded_rows": 5895,
+            "eligible_origins": 5879,
+            "feature_unavailable_origins": 5,
+            "archive_sha256": "8aa27f5e5b9f092ea8e48df682d5a108c1bb0c3e4ee7c27e68d04edfd1febf22",
+            "csv_sha256": "c32f1dda2eb8be17ca2f379fa94375532cca019d667c43662ab17f4a62279f30",
+            "target": "origin",
+            "target_censored_origins": 10,
+            "additional_paired_alignment_exclusions": 1
+          },
+          "losses": {
+            "candidate": {
+              "mse": 4.711561051532091e-06,
+              "mae": 0.0013907270831462638
+            },
+            "zero": {
+              "mse": 5.202854475337108e-06,
+              "mae": 0.0013492084051531315
+            },
+            "constant": {
+              "mse": 5.20267321776254e-06,
+              "mae": 0.0013518494044607548
+            },
+            "lagmean": {
+              "mse": 2.437956714158733e-05,
+              "mae": 0.0030043798366283752
+            }
+          }
+        },
+        "delayed": {
+          "coverage": {
+            "date": "2017-10-11",
+            "recorded_rows": 5895,
+            "eligible_origins": 5879,
+            "feature_unavailable_origins": 5,
+            "archive_sha256": "8aa27f5e5b9f092ea8e48df682d5a108c1bb0c3e4ee7c27e68d04edfd1febf22",
+            "csv_sha256": "c32f1dda2eb8be17ca2f379fa94375532cca019d667c43662ab17f4a62279f30",
+            "target": "delayed",
+            "target_censored_origins": 11,
+            "additional_paired_alignment_exclusions": 0
+          },
+          "losses": {
+            "candidate": {
+              "mse": 5.022157003340172e-06,
+              "mae": 0.0014084974672429896
+            },
+            "zero": {
+              "mse": 5.201084864505729e-06,
+              "mae": 0.0013488527645123913
+            },
+            "constant": {
+              "mse": 5.200917845281614e-06,
+              "mae": 0.0013515229679683088
+            },
+            "lagmean": {
+              "mse": 2.2623412985775332e-05,
+              "mae": 0.0029286631874000076
+            }
+          }
+        }
+      }
+    },
+    {
+      "date": "2017-10-12",
+      "targets": {
+        "origin": {
+          "coverage": {
+            "date": "2017-10-12",
+            "recorded_rows": 8030,
+            "eligible_origins": 8014,
+            "feature_unavailable_origins": 5,
+            "archive_sha256": "08a7c5e847bc34db3bdb259d04c1c23ac59b2fa36710dae99939a568e83733f4",
+            "csv_sha256": "3af4dfcd7f7681da7c0fc576f1e3c964f5504df148c1ae4fd38c91c71914c0f2",
+            "target": "origin",
+            "target_censored_origins": 10,
+            "additional_paired_alignment_exclusions": 1
+          },
+          "losses": {
+            "candidate": {
+              "mse": 4.2555212233162226e-06,
+              "mae": 0.0014203251200638636
+            },
+            "zero": {
+              "mse": 4.540534498967851e-06,
+              "mae": 0.0013710474817515389
+            },
+            "constant": {
+              "mse": 4.538045352698554e-06,
+              "mae": 0.0013723232733886506
+            },
+            "lagmean": {
+              "mse": 2.0123998152425765e-05,
+              "mae": 0.0029056082264631794
+            }
+          }
+        },
+        "delayed": {
+          "coverage": {
+            "date": "2017-10-12",
+            "recorded_rows": 8030,
+            "eligible_origins": 8014,
+            "feature_unavailable_origins": 5,
+            "archive_sha256": "08a7c5e847bc34db3bdb259d04c1c23ac59b2fa36710dae99939a568e83733f4",
+            "csv_sha256": "3af4dfcd7f7681da7c0fc576f1e3c964f5504df148c1ae4fd38c91c71914c0f2",
+            "target": "delayed",
+            "target_censored_origins": 11,
+            "additional_paired_alignment_exclusions": 0
+          },
+          "losses": {
+            "candidate": {
+              "mse": 4.525244639714567e-06,
+              "mae": 0.001436136971023446
+            },
+            "zero": {
+              "mse": 4.535785721621823e-06,
+              "mae": 0.00137032660973043
+            },
+            "constant": {
+              "mse": 4.53326082672969e-06,
+              "mae": 0.00137161398372606
+            },
+            "lagmean": {
+              "mse": 1.8262558145899215e-05,
+              "mae": 0.002793870338225484
+            }
+          }
+        }
+      }
+    },
+    {
+      "date": "2017-10-13",
+      "targets": {
+        "origin": {
+          "coverage": {
+            "date": "2017-10-13",
+            "recorded_rows": 11663,
+            "eligible_origins": 11647,
+            "feature_unavailable_origins": 5,
+            "archive_sha256": "7956e57ff91bcc2a97036e57b5f9b46bd60fa95e3762859b12534ae171ea72a5",
+            "csv_sha256": "3ec24f3e7f0d5ab890f15aea27e72bbd6f7dec300c3fe3e2748ba02ebd658572",
+            "target": "origin",
+            "target_censored_origins": 10,
+            "additional_paired_alignment_exclusions": 1
+          },
+          "losses": {
+            "candidate": {
+              "mse": 5.967569402044523e-06,
+              "mae": 0.0016266845956737703
+            },
+            "zero": {
+              "mse": 6.347017813360742e-06,
+              "mae": 0.0015743860558349119
+            },
+            "constant": {
+              "mse": 6.346538723955e-06,
+              "mae": 0.0015761157586676297
+            },
+            "lagmean": {
+              "mse": 2.806317915950045e-05,
+              "mae": 0.00336129159815523
+            }
+          }
+        },
+        "delayed": {
+          "coverage": {
+            "date": "2017-10-13",
+            "recorded_rows": 11663,
+            "eligible_origins": 11647,
+            "feature_unavailable_origins": 5,
+            "archive_sha256": "7956e57ff91bcc2a97036e57b5f9b46bd60fa95e3762859b12534ae171ea72a5",
+            "csv_sha256": "3ec24f3e7f0d5ab890f15aea27e72bbd6f7dec300c3fe3e2748ba02ebd658572",
+            "target": "delayed",
+            "target_censored_origins": 11,
+            "additional_paired_alignment_exclusions": 0
+          },
+          "losses": {
+            "candidate": {
+              "mse": 6.342965006843231e-06,
+              "mae": 0.0016489147331938542
+            },
+            "zero": {
+              "mse": 6.348977735799856e-06,
+              "mae": 0.0015747961138559518
+            },
+            "constant": {
+              "mse": 6.348487822493302e-06,
+              "mae": 0.0015765430224623197
+            },
+            "lagmean": {
+              "mse": 2.5424331574075866e-05,
+              "mae": 0.0032314812023072756
+            }
+          }
+        }
+      }
+    },
+    {
+      "date": "2017-10-14",
+      "targets": {
+        "origin": {
+          "coverage": {
+            "date": "2017-10-14",
+            "recorded_rows": 6259,
+            "eligible_origins": 6243,
+            "feature_unavailable_origins": 5,
+            "archive_sha256": "b303cc4b27b03f264910e475c49e647a3ef01c9f075abb31e404be854ba36429",
+            "csv_sha256": "9f2b1ddcf494544550224f294ff02f833520bfbd1ee614938267f67d60dc9c91",
+            "target": "origin",
+            "target_censored_origins": 10,
+            "additional_paired_alignment_exclusions": 1
+          },
+          "losses": {
+            "candidate": {
+              "mse": 2.7633179926387322e-06,
+              "mae": 0.001109258375636734
+            },
+            "zero": {
+              "mse": 3.0561035755767233e-06,
+              "mae": 0.0010692895152568176
+            },
+            "constant": {
+              "mse": 3.0550737578536743e-06,
+              "mae": 0.0010712939594863598
+            },
+            "lagmean": {
+              "mse": 1.4907018569925101e-05,
+              "mae": 0.0024197607064434107
+            }
+          }
+        },
+        "delayed": {
+          "coverage": {
+            "date": "2017-10-14",
+            "recorded_rows": 6259,
+            "eligible_origins": 6243,
+            "feature_unavailable_origins": 5,
+            "archive_sha256": "b303cc4b27b03f264910e475c49e647a3ef01c9f075abb31e404be854ba36429",
+            "csv_sha256": "9f2b1ddcf494544550224f294ff02f833520bfbd1ee614938267f67d60dc9c91",
+            "target": "delayed",
+            "target_censored_origins": 11,
+            "additional_paired_alignment_exclusions": 0
+          },
+          "losses": {
+            "candidate": {
+              "mse": 3.0856365858396847e-06,
+              "mae": 0.0011464924787791255
+            },
+            "zero": {
+              "mse": 3.05409709794237e-06,
+              "mae": 0.0010689995827547953
+            },
+            "constant": {
+              "mse": 3.053064158113609e-06,
+              "mae": 0.0010710281750895756
+            },
+            "lagmean": {
+              "mse": 1.2905220104245474e-05,
+              "mae": 0.0022772164778837654
+            }
+          }
+        }
+      }
+    },
+    {
+      "date": "2017-10-15",
+      "targets": {
+        "origin": {
+          "coverage": {
+            "date": "2017-10-15",
+            "recorded_rows": 7452,
+            "eligible_origins": 7436,
+            "feature_unavailable_origins": 5,
+            "archive_sha256": "cdabc09793d237e38e3307117550f0f6082642837cad839fdc478d7480cf0639",
+            "csv_sha256": "b2d4d7b18c0a45e2b304bf4451e792439cdabb48f352ab754b7fba04aaccdde6",
+            "target": "origin",
+            "target_censored_origins": 10,
+            "additional_paired_alignment_exclusions": 1
+          },
+          "losses": {
+            "candidate": {
+              "mse": 5.446247227231066e-06,
+              "mae": 0.0015459579392387447
+            },
+            "zero": {
+              "mse": 6.0327651149923156e-06,
+              "mae": 0.0015119438197005208
+            },
+            "constant": {
+              "mse": 6.0334952047837595e-06,
+              "mae": 0.001514203498809812
+            },
+            "lagmean": {
+              "mse": 2.9157239970949808e-05,
+              "mae": 0.0033527752011343814
+            }
+          }
+        },
+        "delayed": {
+          "coverage": {
+            "date": "2017-10-15",
+            "recorded_rows": 7452,
+            "eligible_origins": 7436,
+            "feature_unavailable_origins": 5,
+            "archive_sha256": "cdabc09793d237e38e3307117550f0f6082642837cad839fdc478d7480cf0639",
+            "csv_sha256": "b2d4d7b18c0a45e2b304bf4451e792439cdabb48f352ab754b7fba04aaccdde6",
+            "target": "delayed",
+            "target_censored_origins": 11,
+            "additional_paired_alignment_exclusions": 0
+          },
+          "losses": {
+            "candidate": {
+              "mse": 5.929234354975483e-06,
+              "mae": 0.0015840343924810984
+            },
+            "zero": {
+              "mse": 6.033176653639353e-06,
+              "mae": 0.001512179072945272
+            },
+            "constant": {
+              "mse": 6.033909608259177e-06,
+              "mae": 0.0015144616033232281
+            },
+            "lagmean": {
+              "mse": 2.598582601571686e-05,
+              "mae": 0.003199257321581474
+            }
+          }
+        }
+      }
+    }
+  ],
+  "targets": {
+    "origin": {
+      "alpha": 0.0,
+      "selected_baseline": "constant",
+      "equal_day_risk": {
+        "candidate": {
+          "mse": 4.608346381624478e-06,
+          "mae": 0.0013940367456254956
+        },
+        "zero": {
+          "mse": 5.324102053386385e-06,
+          "mae": 0.0013830049556561126
+        },
+        "constant": {
+          "mse": 5.323779185420374e-06,
+          "mae": 0.0013853912197823598
+        },
+        "lagmean": {
+          "mse": 2.7667426086277417e-05,
+          "mae": 0.0032015683544425826
+        }
+      },
+      "pooled_origin_risk_secondary": {
+        "candidate": {
+          "mse": 4.722404163537738e-06,
+          "mae": 0.0014122947530881822
+        },
+        "zero": {
+          "mse": 5.480580398963634e-06,
+          "mae": 0.0014026574559330425
+        },
+        "constant": {
+          "mse": 5.480312333840097e-06,
+          "mae": 0.0014050545756342744
+        },
+        "lagmean": {
+          "mse": 2.8710213914990398e-05,
+          "mae": 0.0032637276590473372
+        }
+      }
+    },
+    "delayed": {
+      "alpha": 0.0,
+      "selected_baseline": "constant",
+      "equal_day_risk": {
+        "candidate": {
+          "mse": 5.1508026707254994e-06,
+          "mae": 0.0014427387418874313
+        },
+        "zero": {
+          "mse": 5.3235302025652895e-06,
+          "mae": 0.0013829444222075947
+        },
+        "constant": {
+          "mse": 5.323206391470962e-06,
+          "mae": 0.0013853546234042298
+        },
+        "lagmean": {
+          "mse": 2.480776638816698e-05,
+          "mae": 0.0030569280205736504
+        }
+      },
+      "pooled_origin_risk_secondary": {
+        "candidate": {
+          "mse": 5.305263814496902e-06,
+          "mae": 0.001463907255727601
+        },
+        "zero": {
+          "mse": 5.48030105136626e-06,
+          "mae": 0.001402644373466403
+        },
+        "constant": {
+          "mse": 5.480031408183494e-06,
+          "mae": 0.0014050652714210224
+        },
+        "lagmean": {
+          "mse": 2.566443553422569e-05,
+          "mae": 0.0031119590708377047
+        }
+      }
+    }
+  },
+  "primary_contrasts": {
+    "origin_gain": {
+      "estimate": 0.13438438727045066,
+      "raw_95": [
+        0.09826226695777311,
+        0.15788720244333732
+      ],
+      "adjusted_family3": [
+        0.09104316557123353,
+        0.16215583590590926
+      ],
+      "bootstrap_mean": 0.13128649368717646,
+      "centering_shift": -0.003097893583274197,
+      "units": "fraction_of_selected_baseline_risk",
+      "n_days": 15,
+      "block_days": 3,
+      "resamples": 9999,
+      "seed": 190012
+    },
+    "delayed_gain": {
+      "estimate": 0.032387194496477645,
+      "raw_95": [
+        0.012639036253980341,
+        0.04845914332167922
+      ],
+      "adjusted_family3": [
+        0.00928583410773828,
+        0.051771046773487706
+      ],
+      "bootstrap_mean": 0.029817683380835736,
+      "centering_shift": -0.0025695111156419093,
+      "units": "fraction_of_selected_baseline_risk",
+      "n_days": 15,
+      "block_days": 3,
+      "resamples": 9999,
+      "seed": 190012
+    },
+    "absolute_zero_reference_attenuation": {
+      "estimate": 5.430281399221176e-07,
+      "raw_95": [
+        3.9702033042416204e-07,
+        6.748279416504395e-07
+      ],
+      "adjusted_family3": [
+        3.7356345369484405e-07,
+        7.096539557976612e-07
+      ],
+      "bootstrap_mean": 5.305898776995641e-07,
+      "centering_shift": -1.2438262222553532e-08,
+      "units": "squared_log_return",
+      "n_days": 15,
+      "block_days": 3,
+      "resamples": 9999,
+      "seed": 190012
+    }
+  },
+  "descriptive_gain_difference_fraction": 0.10199719277397301,
+  "caution": "Exploratory paired noncircular blocks underweight endpoints; no causal interpretation or exact coverage"
+}
