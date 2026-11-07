@@ -6,13 +6,13 @@ This repository tests a proposed distinction between observation corruption and 
 
 ## Current results
 
-The next stage audits a fixed free paired Kraken trade/quote sample before any forecasting comparison. Data rights and collector-clock limits are explicit; no quote-based model has been fitted. [Source decision and bounded acquisition plan](docs/quote-acquisition-plan.md).
+The free paired Kraken trade/quote sample passed a bounded audit: 73,704 trades, 862,680 BBO records, matching integrity checks and independently reproduced backward alignment. It supports designing a collector-clock comparison, with missing trade IDs, clock ties and single-session limits explicit. No quote-based model has been fitted. [Readiness findings and audit](docs/quote-readiness-results.md).
 
 The fresh-period paired-target control finds 13.44% MSE improvement for an origin-start return and 3.24% when the return starts one trade later, on matched October 2017 test origins. MAE is worse for both (0.62% and 4.14%). The result supports substantial near-origin concentration of recorded-price predictability, without identifying its cause. [Fresh-period control, uncertainty and audit](docs/market-delay-results.md).
 
 The first real recorded-market study uses 30 days of historical BTCUSDT trades with a 10/5/15-day train/validation/test split. A validation-selected AR(5) baseline improves held-out equal-day MSE by 7.98% versus the selected constant baseline, while MAE is 0.95% worse. Exploratory dependence-aware intervals and the early-period/archive limits are explicit. This does not validate RippleNet's cause mechanism or profitability. [Real-data findings and independent review](docs/market-study-results.md).
 
-Market-data-derived findings are attributed to Binance Vision and distributed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/), with computed changes and source links documented in the report. This notice does not relicense independent project code.
+Binance-derived findings are attributed to Binance Vision and distributed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/), with computed changes and source links documented in the report. This notice does not relicense independent project code. The selected Tardis source has different terms: eligible aggregate research may be public, while raw records and trained model weights must remain private; it is not covered by the Binance notice.
 
 The new scalar information diagnostic finds a 68.68% optimal-risk reduction from a stipulated clean second measurement. A linear predictor with those same inputs captures 99.16% of that improvement; exact nonlinear inference adds 1.81% relative to the full-input linear risk. All frozen numerical checks pass. This conditional synthetic result validates no real market sensor or architecture. [Results, controls and review](docs/information-diagnostic-results.md). The current archive's evidence gaps remain unmet.
 
@@ -74,6 +74,7 @@ To reproduce the frozen benchmark into a separate directory, run `python -m ripp
 - [Auxiliary-information diagnostic](docs/information-diagnostic-results.md): frozen new scalar question, information versus same-input approximation gaps, analytic controls and all quadrature orders.
 - [Real recorded-market study](docs/market-study-results.md): 30 fixed BTCUSDT dates, protected test comparison, source provenance, uncertainty and competing explanations.
 - [Fresh-period delayed-start control](docs/market-delay-results.md): matched origins and features, target-specific fits, common-reference contrast and all paired losses.
+- [Paired quote/trade readiness](docs/quote-readiness-results.md): bounded free-sample inspection, strict backward alignment, source-specific rights and the next experiment's gates.
 
 To reproduce v2 into a separate directory, run `python -m ripplenet.history_experiment --stage final --output work/v2-reproduction`. This repeats disclosed seeds and does not supply a new independent test.
 
