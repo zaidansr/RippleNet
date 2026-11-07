@@ -6,6 +6,8 @@ This repository tests a proposed distinction between observation corruption and 
 
 ## Current results
 
+The next stage audits a fixed free paired Kraken trade/quote sample before any forecasting comparison. Data rights and collector-clock limits are explicit; no quote-based model has been fitted. [Source decision and bounded acquisition plan](docs/quote-acquisition-plan.md).
+
 The fresh-period paired-target control finds 13.44% MSE improvement for an origin-start return and 3.24% when the return starts one trade later, on matched October 2017 test origins. MAE is worse for both (0.62% and 4.14%). The result supports substantial near-origin concentration of recorded-price predictability, without identifying its cause. [Fresh-period control, uncertainty and audit](docs/market-delay-results.md).
 
 The first real recorded-market study uses 30 days of historical BTCUSDT trades with a 10/5/15-day train/validation/test split. A validation-selected AR(5) baseline improves held-out equal-day MSE by 7.98% versus the selected constant baseline, while MAE is 0.95% worse. Exploratory dependence-aware intervals and the early-period/archive limits are explicit. This does not validate RippleNet's cause mechanism or profitability. [Real-data findings and independent review](docs/market-study-results.md).
