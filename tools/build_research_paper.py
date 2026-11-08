@@ -26,7 +26,7 @@ from pypdf import PdfReader
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT/"docs/research-paper.md"
-OUTPUT = ROOT/"paper/RippleNet_research_report.pdf"
+OUTPUT = ROOT/"paper/RippleNet_final_research_report.pdf"
 
 EQUATIONS = {
     "eq1": '<i>x</i><sub>t</sub> = A<i>x</i><sub>t-1</sub> + <i>w</i><sub>t</sub> + <i>s</i><sub>t</sub>, '
@@ -104,7 +104,8 @@ def build() -> None:
     width, height = A4
     margin = 48
     body_width = width-2*margin
-    doc = PaperDocument(str(OUTPUT), pagesize=A4, leftMargin=margin, rightMargin=margin,
+    temporary_output = OUTPUT.with_suffix('.building.pdf')
+    doc = PaperDocument(str(temporary_output), pagesize=A4, leftMargin=margin, rightMargin=margin,
                         topMargin=48, bottomMargin=45, title="Observation Distortions, Market Shocks, and Forecast Value",
                         author="RippleNet research project", subject="Research pilot synthesis and limitations")
     def page(canvas, document) -> None:
@@ -184,12 +185,13 @@ def build() -> None:
         text=' '.join(paragraph)
         style=styles['reference' if in_refs else 'body']
         if text.startswith('*A reproducible'):style=styles['subtitle']
-        elif text.startswith('RippleNet research project |') or text.startswith('Research report and manuscript'):style=styles['meta']
+        elif text.startswith('RippleNet research project |') or text.startswith('Completed research pilot.'):style=styles['meta']
         story.append(Paragraph(inline(text),style))
     doc.build(story)
+    temporary_output.replace(OUTPUT)
     pdf=PdfReader(str(OUTPUT))
     metadata={'source':'docs/research-paper.md','source_sha256':hashlib.sha256(SOURCE.read_bytes()).hexdigest(),
-              'pdf':'paper/RippleNet_research_report.pdf','pdf_sha256':hashlib.sha256(OUTPUT.read_bytes()).hexdigest(),
+              'pdf':'paper/RippleNet_final_research_report.pdf','pdf_sha256':hashlib.sha256(OUTPUT.read_bytes()).hexdigest(),
               'pages':len(pdf.pages),'source_word_count':len(source.split()),'reportlab':reportlab.Version,
               'python':sys.version.split()[0],'format':'A4 single-column research manuscript; embedded serif fonts',
               'contains_new_experiment':False,'restricted_models_or_records_included':False}

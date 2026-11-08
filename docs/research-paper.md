@@ -4,7 +4,7 @@
 
 RippleNet research project | Maintainer zaidansr | 8 November 2026
 
-Research report and manuscript draft. Not peer reviewed. AI-assisted research and writing.
+Completed research pilot. Final report. Not peer reviewed. AI-assisted research and writing.
 
 ## Abstract
 
@@ -14,7 +14,7 @@ Distinguishing an erroneous observation from a genuine state shock may improve s
 
 ## 1 Introduction
 
-A large recorded price movement can reflect changing market state, a recording problem, ordinary measurement differences or several effects together. A model that reacts identically to these explanations may appear unnecessarily fragile. The RippleNet hypothesis was therefore that maintaining competing observation-error and genuine-shock explanations could improve financial time-series forecasting. This report evaluates the evidence accumulated while testing that hypothesis, including negative and mixed findings. RippleNet is a working project label here, not a completed or validated neural architecture.
+A large recorded price movement can reflect changing market state, a recording problem, ordinary measurement differences or several effects together. A model that reacts identically to these explanations may appear unnecessarily fragile. The RippleNet hypothesis was therefore that maintaining competing observation-error and genuine-shock explanations could improve financial time-series forecasting. This report evaluates the evidence accumulated while testing that hypothesis, including negative and mixed findings. RippleNet names the completed research pilot; its implemented candidates are classical filtering and linear prediction methods, with no validated neural architecture claimed.
 
 Three questions must be separated. First, can the available observations distinguish event types? Second, does any resulting information change the conditional mean of the target enough to improve the intended loss? Third, does a specialised predictor outperform a strong method receiving the same information? An improvement against a weaker information set or a deliberately limited ablation does not answer the third question.
 

@@ -7,3 +7,7 @@ work/
 .env
 .env.*
 !.env.example
+
+# Superseded local export and incomplete PDF builds; publish the final report.
+/paper/RippleNet_research_report.pdf
+/paper/*.building.pdf

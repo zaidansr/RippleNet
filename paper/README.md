@@ -1,8 +1,8 @@
 # Research manuscript
 
-[Read the research-paper PDF](RippleNet_research_report.pdf). The editable source is [research-paper.md](../docs/research-paper.md), with a separate [conclusion](../docs/conclusion.md).
+[Read the final research-paper PDF](RippleNet_final_research_report.pdf). The editable source is [research-paper.md](../docs/research-paper.md), with a separate [conclusion](../docs/conclusion.md).
 
-The manuscript synthesizes the existing pilot; it adds no experiment or fit. It is an AI-assisted research draft, not an externally peer-reviewed publication. Source-specific attribution and publication conditions are explained in Section 8; no blanket data or manuscript license is asserted.
+The manuscript is the final report of the completed AI-assisted research pilot; it adds no experiment or fit. It has not been externally peer reviewed. Source-specific attribution and publication conditions are explained in Section 8; no blanket data or manuscript license is asserted.
 
 ## Rebuild
 
@@ -14,5 +14,6 @@ Run `python tools/build_research_paper.py` from the repository root with ReportL
 
 - Scientific, mathematical and numeric synthesis checked by AI subagents against the stage reports; requested corrections incorporated. See [internal scientific review](../docs/manuscript-scientific-review.md).
 - All ten pages rendered with Poppler and visually inspected. After correcting the appendix heading placement, the changed pages were rendered and inspected again; the remaining seven page images were byte-identical.
+- The final completion-status revision changed only page 1, which was rendered and inspected again; pages 2-10 were byte-identical to the inspected export.
 - Source and extracted PDF text checked for the expected sections, seven equation numbers, six numbered results tables and the appendix evidence table. Links preserve the cited evidence snapshot.
 - No raw vendor records, fitted private parameters or per-origin predictions are included. Existing software tests are reported as implementation evidence, not newly run for this document export.

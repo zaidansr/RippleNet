@@ -1,12 +1,12 @@
-# RippleNet: work-in-progress AI-assisted research
+# RippleNet: completed AI-assisted research pilot
 
-Work-in-progress quantitative research project using AI to investigate observation distortions, market shocks, and robust financial time-series forecasting.
+Completed quantitative research pilot using AI to investigate observation distortions, market shocks, and robust financial time-series forecasting.
 
 This repository tests a proposed distinction between observation corruption and genuine state shocks. It provides a simulator, causal filtering diagnostics, a frozen synthetic benchmark, matched ablations, tests, and a critical research review. It does not contain a trained neural RippleNet model or evidence of superiority in financial markets.
 
 ## Current results
 
-The completed pilot is synthesized in a [research-paper PDF](paper/RippleNet_research_report.pdf), with an [editable manuscript](docs/research-paper.md) and [standalone conclusion](docs/conclusion.md). It reports all synthetic and recorded-market stages, uncertainty, ablations, coverage and limitations. The evidence does not validate a financial RippleNet architecture, real error-versus-shock identification, or profitability. The manuscript is an AI-assisted research draft, not peer reviewed.
+The completed pilot is synthesized in a [research-paper PDF](paper/RippleNet_final_research_report.pdf), with an [editable manuscript](docs/research-paper.md) and [standalone conclusion](docs/conclusion.md). It reports all synthetic and recorded-market stages, uncertainty, ablations, coverage and limitations. The evidence does not validate a financial RippleNet architecture, real error-versus-shock identification, or profitability. The final report documents the completed AI-assisted research pilot and has not been externally peer reviewed.
 
 The multi-session Kraken quote comparison finds no aggregate trade-MSE benefit beyond a fixed starting-gap correction: the fitted model is 0.061% worse. Midpoint MSE improves 0.761% versus its selected constant, with worse MAE. Only three monthly test sessions and 17.73% grid scoring coverage support descriptive conclusions. [Results, mechanical baseline and audit](docs/quote-study-results.md). Fitted parameters remain private under source terms.
 

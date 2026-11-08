@@ -31,4 +31,4 @@ No Tardis learned coefficients, selected regularization values, fitted scalers/i
 
 ## Resolution
 
-All three requested corrections were incorporated. A final read-only subagent check confirmed them and found no remaining scientific blocker. The document remains an internally reviewed research draft, not an externally peer-reviewed paper.
+All three requested corrections were incorporated. A final read-only subagent check confirmed them and found no remaining scientific blocker. The completed pilot's final report has been internally reviewed and has not been externally peer reviewed.
